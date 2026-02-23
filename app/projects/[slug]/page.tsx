@@ -1,7 +1,7 @@
 import projects from '@/app/projects'
 import React from 'react'
-import ProjectClient from './project-client';
 import { projectType } from '@/lib/types';
+import ProjectClient from '@/components/project-client';
 const ProjectPage = async ({params,} : {params: Promise<{slug: string}>}) => {
     const {slug} = await params;
     const project = projects.find((p) => p.slug == slug)!

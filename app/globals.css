@@ -1,11 +1,31 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fragment+Mono:ital@0;1&display=swap');
+@import "tailwindcss";
+
+/* * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+} */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-fragment-mono: "Fragment Mono", monospace;
+  --color-primary-black: #101010;
+  --color-primary-white: #cdc9b9;
 }
 
-body{
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
+
+/* body{
     background-color: #e3e3db;
     color: #1a1a1a;
     font-family: "PP Neue Montreal", sans-serif;
@@ -178,4 +198,4 @@ a {
     .project-img{
         width: 90%;
     }
- }
+ } */
