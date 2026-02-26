@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="w-screen min-h-dvh bg-[#101010]">
+    <section className="w-full bg-[#101010] overflow-x-hidden">
        <HomeClient />
     </section>
   );

@@ -3,5 +3,8 @@ export type projectType = {
     slug: string;
     title: string;
     description: string;
-    images: string[]
+    images: string[];
+    expertise: string;
+    techStack: string;
+    year: string;
 }

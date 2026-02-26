@@ -73,7 +73,7 @@ const Hero = () => {
     }, { scope: container, dependencies: [] })
  
     return (
-    <div ref={container} className='w-screen h-screen flex items-center justify-center relative overflow-y-hidden'>
+    <div ref={container} className='w-full min-h-dvh flex items-center justify-center relative'>
          <div className="w-full h-dvh bg-primary-white z-20 absolute top-0 left-0 flex items-center justify-center">
             <p><span className='welcome-text-1'>Tomorrow's</span> <span className='welcome-text-2'>Brands,</span> <span className='welcome-text-3'>Today</span></p>
          </div>

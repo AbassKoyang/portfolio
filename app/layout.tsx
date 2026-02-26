@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-fragment-mono antialiased`}
+        className={`font-fragment-mono antialiased w-screen overflow-x-hidden`}
       >
-        {children}
+        <main className="w-full">
+          {children}
+        </main>
       </body>
     </html>
   );
