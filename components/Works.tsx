@@ -6,7 +6,10 @@ import Link from 'next/link';
 import React, { useRef, useState } from 'react'
 import Index from './Index';
 import CursorFollower from './Cursor';
+import Grid from './Grid';
+import { ScrollTrigger } from 'gsap/all';
 
+gsap.registerPlugin(ScrollTrigger)
 const Works = () => {
   const container = useRef(null);
   const [mode, setMode] = useState<'index' | 'grid'>('grid');
@@ -44,7 +47,11 @@ const Works = () => {
         duration: 0.8,
         y: 0,
         ease: 'expo.inOut',
-        stagger: 0.1
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: container.current,
+          start: 'top center'
+        }
       })
   }, { scope: container, dependencies: [mode] })
 
@@ -52,8 +59,8 @@ const Works = () => {
     <div ref={container} className="w-full p-8 bg-primary-black overflow-x-hidden">
           <CursorFollower />
       <div className="w-full flex items-center justify-between">
-        <p className='text-sm text-primary-white font-fragment-mono uppercase'>// Selected projects ©2026</p>
-        <div className="flex items-center gap-0.5 text-sm text-primary-white font-fragment-mono">
+        <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// Selected projects ©2026</p>
+        <div className="lg:flex items-center gap-0.5 text-sm text-primary-white font-fragment-mono hidden">
           <p className='uppercase'>[</p>
           <button onClick={() => setMode('grid')} className={`uppercase ${mode == 'grid' ? 'underline' : ''} cursor-pointer hover:underline ease-in-out duration-300 transition-all origin-left`}>Grid</button>
           <p className='uppercase'>,</p>
@@ -63,26 +70,9 @@ const Works = () => {
       </div>
 
       {mode == 'grid' && (
-        <div className="w-full h-[1800px] grid grid-cols-3 grid-row-4 gap-3 mt-8">
+        <div className="w-full flex flex-wrap lg:grid lg:grid-cols-3 gap-3 mt-8">
           {projects.map((project) => (
-            <div className="row-span-1 nth-1:col-span-1 nth-2:col-span-2 nth-3:col-span-2 nth-4:col-span-1 nth-5:col-span-1 nth-6:col-span-2 nth-7:col-span-2 nth-8:col-span-1 even:bg-black odd:bg-green-300 overflow-hidden relative group cursor-pointer rounded-md grid">
-              <Image
-                className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
-                fill
-                src={project.images[0]}
-                loading='eager'
-                placeholder='blur'
-                blurDataURL='/assets/images/default-avatar.png'
-                alt='Profle Picture'
-                />
-                <div className="size-full absolute top-0 left-0 opacity-60 bg-black z-30 group-hover:opacity-0 ease-in-out duration-500 transition-all flex items-center justify-center">
-                  <p className='text-primary-white font-fragment-mono text-2xl uppercase font-semibold'>{project.title}</p>
-                </div>
-                <div className="flex items-center gap-1 absolute top-5 left-5 group-hover:opacity-100 opacity-0">
-                    <div className="size-1.5 available-box opacity-30 bg-white"></div>
-                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>{project.title}</p>
-                </div>
-            </div>
+            <Grid project={project} />
           ))}
         </div>
       )}
@@ -113,7 +103,7 @@ const Works = () => {
       )}
 
       <div className="mt-8">
-        <Link href='/projects' className='text-primary-white font-fragment-mono text-sm uppercase px-4 py-2 border border-primary-white rounded-md mt'>View all projects</Link>
+        <Link href='/projects' className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase px-4 py-2 border border-primary-white rounded-md mt'>View all projects</Link>
       </div>
       
 
