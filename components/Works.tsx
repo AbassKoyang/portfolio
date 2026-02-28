@@ -4,6 +4,8 @@ import gsap from 'gsap';
 import Image from 'next/image'
 import Link from 'next/link';
 import React, { useRef, useState } from 'react'
+import Index from './Index';
+import CursorFollower from './Cursor';
 
 const Works = () => {
   const container = useRef(null);
@@ -19,9 +21,6 @@ const Works = () => {
   }, { scope: container, dependencies: [] })
 
     useGSAP(() => {
-      // gsap.set('.indices', {
-      //   transformOrigin: 'cent'
-      // })
       gsap.fromTo('.indices', {
           opacity: 0,
           scale: '1.05'
@@ -35,8 +34,23 @@ const Works = () => {
       })
   }, { scope: container, dependencies: [mode] })
 
+    useGSAP(() => {
+      gsap.fromTo('.grid', {
+          opacity: 0,
+          y: '20px'
+          
+      }, {
+        opacity: 1,
+        duration: 0.8,
+        y: 0,
+        ease: 'expo.inOut',
+        stagger: 0.1
+      })
+  }, { scope: container, dependencies: [mode] })
+
   return (
-    <div ref={container} className="w-full  p-8 bg-primary-black overflow-x-hidden">
+    <div ref={container} className="w-full p-8 bg-primary-black overflow-x-hidden">
+          <CursorFollower />
       <div className="w-full flex items-center justify-between">
         <p className='text-sm text-primary-white font-fragment-mono uppercase'>// Selected projects ©2026</p>
         <div className="flex items-center gap-0.5 text-sm text-primary-white font-fragment-mono">
@@ -51,7 +65,7 @@ const Works = () => {
       {mode == 'grid' && (
         <div className="w-full h-[1800px] grid grid-cols-3 grid-row-4 gap-3 mt-8">
           {projects.map((project) => (
-            <div className="row-span-1 nth-1:col-span-1 nth-2:col-span-2 nth-3:col-span-2 nth-4:col-span-1 nth-5:col-span-1 nth-6:col-span-2 nth-7:col-span-2 nth-8:col-span-1 even:bg-black odd:bg-green-300 overflow-hidden relative group cursor-pointer rounded-md">
+            <div className="row-span-1 nth-1:col-span-1 nth-2:col-span-2 nth-3:col-span-2 nth-4:col-span-1 nth-5:col-span-1 nth-6:col-span-2 nth-7:col-span-2 nth-8:col-span-1 even:bg-black odd:bg-green-300 overflow-hidden relative group cursor-pointer rounded-md grid">
               <Image
                 className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                 fill
@@ -93,25 +107,7 @@ const Works = () => {
         </div>
 
         {projects.map((project) => (
-          <div className='indices'>
-            <div className="w-full flex items-center justify-between py-2 border-b border-primary-white/10">
-                <div className="w-[70%] flex items-center">
-                    <div className="w-[30%] flex items-center justify-start">
-                      <p className='text-primary-white font-fragment-mono text-sm uppercase'>{project.title}</p>
-                    </div>
-                    <div className="w-[25%] flex items-center justify-start">
-                      <p className='text-primary-white font-fragment-mono text-sm uppercase'>{project.expertise}</p>
-                    </div>
-                    <div className="w-[35%] flex items-center justify-start">
-                      <p className='text-primary-white font-fragment-mono text-sm uppercase'>{project.techStack.length > 50 ? project.techStack + '...' : project.techStack}</p>
-                    </div>
-                    <div className="w-[10%] flex items-center justify-start">
-                      <p className='text-primary-white font-fragment-mono text-sm uppercase'>{project.year}</p>
-                    </div>
-                  </div>
-                  <Link className='text-primary-white font-fragment-mono text-sm uppercase' href={`/projects/${project.slug}`}>View more[+]</Link>
-                </div>
-          </div>
+          <Index project={project} />
         ))}
       </div>
       )}

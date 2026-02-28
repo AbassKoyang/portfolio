@@ -8,3 +8,9 @@ export type projectType = {
     techStack: string;
     year: string;
 }
+
+export type linkType = {
+    text: string;
+    class: string;
+    url: string;
+}
