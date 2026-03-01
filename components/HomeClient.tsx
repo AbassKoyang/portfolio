@@ -19,7 +19,6 @@ const HomeClient = () => {
         <Hero />
         <Works />
         <Profile/>
-        <Footer />
     </div>
   )
 }

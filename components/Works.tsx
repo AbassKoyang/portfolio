@@ -57,7 +57,6 @@ const Works = () => {
 
   return (
     <div ref={container} className="w-full p-8 bg-primary-black overflow-x-hidden">
-          <CursorFollower />
       <div className="w-full flex items-center justify-between">
         <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// Selected projects ©2026</p>
         <div className="lg:flex items-center gap-0.5 text-sm text-primary-white font-fragment-mono hidden">

@@ -5,6 +5,9 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
 import { SplitText } from 'gsap/all';
+import NavLink from './Link';
+import { emailLink, headerLinks, socialLinks } from '@/lib/utils';
+import Clock from './Clock';
 
 gsap.registerPlugin(SplitText)
 
@@ -99,7 +102,7 @@ const Hero = () => {
                             <div className="flex flex-col items-start lg:items-end mt-8">
                                 <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase'>Lagos, Nigeria</p>
                                 <div className="flex items-center gap-1">
-                                    <div className="w-1.5 h-1.5 lg:h-3 available-box opacity-30 bg-white"></div>
+                                    <div className="w-1.5 h-1.5 lg:h-3 available-box opacity-30 bg-primary-white"></div>
                                     <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase'>avallable for work</p>
                                 </div>
                             </div>
@@ -112,41 +115,25 @@ const Hero = () => {
                     <div className="items-center justify-between w-full hidden lg:flex">
                         <div className="">
                             <Link href='/'>
-                                <p className='font-fragment-mono font-bold text-lg text-primary-white uppercase'>Koyang©</p>
+                                <p className='font-fragment-mono font-bold text-lg text-primary-white uppercase mb-1'>Koyang©</p>
                             </Link>
-                            <div className="flex items-center gap-3 mt-1">
-                                <p className='text-primary-white font-fragment-mono text-sm'>4:07:59</p>
-                                <p className='text-primary-white font-fragment-mono text-sm'>PM</p>
-                                <p className='text-primary-white font-fragment-mono text-sm'>GMT+1</p>
-                            </div>
+                            <Clock />
                         </div>
 
-                        <div className="flex items-center gap-12">
-                            <Link href='#'>
-                                <p  className='text-primary-white font-fragment-mono text-sm uppercase'>Projects[11]</p>
-                            </Link>
-                            <Link href='#'>
-                                <p  className='text-primary-white font-fragment-mono text-sm uppercase'>About</p>
-                            </Link>
-                            <Link href='#'>
-                                <p  className='text-primary-white font-fragment-mono text-sm uppercase'>archive</p>
-                            </Link>
-                            <Link href='#'>
-                                <p  className='text-primary-white font-fragment-mono text-sm uppercase'>vibe-check</p>
-                            </Link>
+                        <div className="lg:flex items-center gap-12 hidden">
+                            <nav className="flex items-center gap-12 flex-row">
+                                {headerLinks.map((link, i) => (
+                                    <NavLink link={link} key={i} />
+                                ))}
+                            </nav>
                             <div className="">
                                 <p className="text-sm text-primary-white uppercase">CONTACT</p>
-                                <Link href='#'>
-                                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>abasskoyang05@gmail.com</p>
-                                </Link>
+                                <NavLink link={emailLink} />
                             </div>
-                            <div className="">
-                                <Link href='#'>
-                                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>github</p>
-                                </Link>
-                                <Link href='#'>
-                                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>linkedin</p>
-                                </Link>
+                            <div className=" flex flex-col items-start">
+                                {socialLinks.map((link, i) => (
+                                    <NavLink link={link} key={i} />
+                                ))}
                             </div>
 
                             <div className="flex flex-col items-end">

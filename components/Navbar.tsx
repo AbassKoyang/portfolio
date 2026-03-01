@@ -2,11 +2,15 @@
 import Link from 'next/link';
 import { FormEvent, useEffect, useRef, useState } from 'react'
 import {motion} from 'motion/react'
-
+import { emailLink, headerLinks, socialLinks } from '@/lib/utils';
+import NavLink from './Link';
+import Clock from './Clock';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const lastScrollY = useRef(0)
+    const pathname = usePathname()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,7 +20,7 @@ const Navbar = () => {
             return
           }
     
-          if (currentScrollY >= window.innerHeight) {
+          if (currentScrollY >= (pathname == '/' ? window.innerHeight : 40)) {
             setVisible(true)
           } 
           else {
@@ -40,39 +44,23 @@ const Navbar = () => {
                 <Link href='/'>
                     <p className='font-fragment-mono font-bold text-xl text-primary-white uppercase'>Koyang©</p>
                 </Link>
-                <div className="flex items-center gap-3 mt-0">
-                    <p className='text-primary-white font-fragment-mono text-sm'>4:07:59</p>
-                    <p className='text-primary-white font-fragment-mono text-sm'>PM</p>
-                    <p className='text-primary-white font-fragment-mono text-sm'>GMT+1</p>
-                </div>
+                <Clock />
             </div>
 
             <div className="lg:flex items-center gap-12 hidden">
-                <Link href='#'>
-                    <p  className='text-primary-white font-fragment-mono text-sm uppercase'>Projects[11]</p>
-                </Link>
-                <Link href='#'>
-                    <p  className='text-primary-white font-fragment-mono text-sm uppercase'>About</p>
-                </Link>
-                <Link href='#'>
-                    <p  className='text-primary-white font-fragment-mono text-sm uppercase'>archive</p>
-                </Link>
-                <Link href='#'>
-                    <p  className='text-primary-white font-fragment-mono text-sm uppercase'>vibe-check</p>
-                </Link>
+                <nav className="flex items-center gap-12 flex-row">
+                    {headerLinks.map((link, i) => (
+                        <NavLink link={link} key={i} />
+                    ))}
+                </nav>
                 <div className="">
                     <p className="text-sm text-primary-white uppercase">CONTACT</p>
-                    <Link href='#'>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>abasskoyang05@gmail.com</p>
-                    </Link>
+                    <NavLink link={emailLink} />
                 </div>
-                <div className="">
-                    <Link href='#'>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>github</p>
-                    </Link>
-                    <Link href='#'>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>linkedin</p>
-                    </Link>
+                <div className=" flex flex-col items-start">
+                    {socialLinks.map((link, i) => (
+                        <NavLink link={link} key={i} />
+                    ))}
                 </div>
 
                 <div className="flex flex-col items-end">
