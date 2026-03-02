@@ -175,7 +175,7 @@ const ProjectClient = ({
                 -z-10
               "
             />
-            <p className="text-base font-medium text-primary-white mix-blend-difference">
+            <p className="text-base font-medium text-primary-black">
               {project.title}
             </p>
           </div>
@@ -202,9 +202,9 @@ const ProjectClient = ({
             className="
               absolute bottom-[10%]
               left-1/2 -translate-x-1/2 -translate-y-1/2
-              text-center text-base font-medium
+              text-center text-xs lg:text-base font-medium
               opacity-0
-              text-primary-white
+              text-primary-white max-w-full lg:max-w-[500px] px-4
             "
           >
             {project.description}
@@ -225,7 +225,7 @@ const ProjectClient = ({
 
         <div className="mt-5 lg:mt-10 w-full flex px-4">
             <div className="w-full lg:w-[70%] bg-primary-black">
-                <div className="w-full h-[300px] lg:h-[600px] rounded-xl relative overflow-hidden">
+                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -237,11 +237,11 @@ const ProjectClient = ({
                     />
                 </div>
 
-                <div className="w-full h-[300px] lg:h-[600px] rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
-                    src={project.images[1]}
+                    src={project.images[2]}
                     loading='eager'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
@@ -279,22 +279,22 @@ const ProjectClient = ({
                 </div>
 
                 <div className="w-full lg:h-[500px] mt-4 lg:mt-8 flex flex-wrap lg:grid lg:grid-cols-2 gap-5">
-                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative rounded-xl overflow-hidden">
+                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative lg:rounded-xl overflow-hidden">
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
-                        src={project.images[1]}
+                        src={project.images[2]}
                         loading='eager'
                         placeholder='blur'
                         blurDataURL='/assets/images/default-avatar.png'
                         alt='Project Image'
                         />
                     </div>
-                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative rounded-xl overflow-hidden">
+                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative lg:rounded-xl overflow-hidden">
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
-                        src={project.images[1]}
+                        src={project.images[3]}
                         loading='eager'
                         placeholder='blur'
                         blurDataURL='/assets/images/default-avatar.png'
@@ -302,7 +302,7 @@ const ProjectClient = ({
                         />
                     </div>
                 </div>
-                <div className="w-full h-[300px] lg:h-[600px] rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -345,7 +345,7 @@ const ProjectClient = ({
         </div>
 
 
-        <MoreProjects />
+        <MoreProjects currentProject={project} />
 
 
         <div

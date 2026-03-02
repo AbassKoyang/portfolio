@@ -60,10 +60,10 @@ const projects : projectType[] = [
         overview: 'Shopee is a full-featured e-commerce marketplace platform with product browsing by categories/subcategories, user profiles, orders/sales management, chat/inbox, payments (cards/banks via Paystack), search (Algolia), notifications, and settings. Supports buying/selling, product management, real-time chat via Socket.io, and Firebase integration.',
         images: [
             "/shoppe-1.png",
+            "/shoppe-2.png",
+            "/shoppe-3.png",
             "/shoppe-1.png",
-            "/shoppe-1.png",
-            "/shoppe-1.png",
-            "/shoppe-1.png"
+            "/shoppe-2.png"
         ],
         expertise: 'Full Stack',
         techStack: 'Next.js 15 (App Router), TailwindCSS 4, Shadcn UI (with Radix UI, class-variance-authority), TypeScript, GSAP + Framer Motion, TanStack Query, React Hook Form + Zod, Firebase, Mastra, Express.js (server), BullMQ/Redis (queues), Socket.io, Algolia, Paystack, Next Cloudinary, React Email/Resend, Lucide icons',

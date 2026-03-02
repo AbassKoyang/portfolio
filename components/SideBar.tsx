@@ -25,7 +25,7 @@ const SideBar = () => {
             return
           }
     
-          if (Math.abs(currentScrollY - lastScrollY.current) < 15) {
+          if (Math.abs(currentScrollY - lastScrollY.current) < 100) {
             return
           }
     
@@ -118,7 +118,7 @@ const SideBar = () => {
     }
 
   return (
-    <motion.header ref={container} initial={false} animate={{x: visible ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className={`h-full fixed top-0 left-0 md:border-r border-primary-white/30 z-300 bg-primary-black py-8 px-4 hidden lg:block`}>
+    <motion.header ref={container} initial={false} animate={{x: visible ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className={`h-full fixed top-0 left-0 md:border-r border-primary-white/30 z-300 bg-primary-black py-8 px-4`}>
         <div className="items-center justify-between w-full h-full flex flex-col-reverse">
             <div className="[writing-mode:vertical-rl] rotate-180">
                 <Link href='/'>

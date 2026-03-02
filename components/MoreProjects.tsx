@@ -7,10 +7,13 @@ import Image from 'next/image'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Grid from './Grid';
+import { projectType } from '@/lib/types';
 
-const MoreProjects = () => {
+const MoreProjects = ({currentProject}:{currentProject: projectType}) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [image, setImage] = useState(projects[0].images[0]);
+    const moreProjects = projects.filter((project)=> project.slug  !== currentProject.slug)
+
 
     useGSAP(() => {
         gsap.from('.project-preview', {
@@ -51,7 +54,7 @@ const MoreProjects = () => {
                     </div>
                 </div>
 
-                {projects.map((project) => (
+                {moreProjects.map((project) => (
                 <MoreProjectsIndex project={project} setImage={setImage} />
                     ))}
             </div>
