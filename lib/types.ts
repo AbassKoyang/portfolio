@@ -7,6 +7,7 @@ export type projectType = {
     expertise: string;
     techStack: string;
     year: string;
+    overview: string;
 }
 
 export type linkType = {

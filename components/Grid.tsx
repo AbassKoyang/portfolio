@@ -4,9 +4,12 @@ import gsap from 'gsap';
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import {motion} from 'motion/react'
+import { useRouter } from 'next/navigation';
 
 const Grid = ({project}:{project: projectType}) => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const router = useRouter()
+
 
     const cursorRef = useRef<HTMLParagraphElement | null>(null);
 
@@ -53,7 +56,7 @@ const Grid = ({project}:{project: projectType}) => {
     }, { scope: containerRef, dependencies: [] })
 
   return (
-    <motion.div onHoverStart={() => gsap.to(cursorRef.current, {opacity: 1})} onHoverEnd={() => gsap.to(cursorRef.current, {opacity: 0})} ref={containerRef} className="w-full h-[250px] lg:h-[350px] row-span-1 lg:nth-1:col-span-1 lg:nth-2:col-span-2 lg:nth-3:col-span-2 lg:nth-4:col-span-1 lg:nth-5:col-span-1 lg:nth-6:col-span-2 lg:nth-7:col-span-2 lg:nth-8:col-span-1 even:bg-black odd:bg-green-300 overflow-hidden relative group cursor-pointer rounded-md grid">
+    <motion.div onClick={() => router.push(`/projects/${project.slug}`)} onHoverStart={() => gsap.to(cursorRef.current, {opacity: 1})} onHoverEnd={() => gsap.to(cursorRef.current, {opacity: 0})} ref={containerRef} className="w-full h-[250px] lg:h-[350px] row-span-1 lg:nth-1:col-span-1 lg:nth-2:col-span-2 lg:nth-3:col-span-2 lg:nth-4:col-span-1 lg:nth-5:col-span-1 lg:nth-6:col-span-2 lg:nth-7:col-span-2 lg:nth-8:col-span-1 even:bg-black odd:bg-green-300 overflow-hidden relative group cursor-pointer rounded-md grid">
         <p
             ref={cursorRef}
             className="

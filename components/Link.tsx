@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { motion } from "motion/react";
 import gsap from "gsap";
 
-const NavLink = ({ link }: { link: linkType }) => {
+const NavLink = ({ link, className, paragraphStyles }: { link: linkType; className?: string; paragraphStyles?: string }) => {
   const textRef = useRef<HTMLParagraphElement | null>(null);
   const lineRef = useRef<HTMLDivElement | null>(null);
 
@@ -31,7 +31,7 @@ const NavLink = ({ link }: { link: linkType }) => {
 
   return (
     <Link href={link.url}>
-      <div className="inline-block relative">
+      <div className={`inline-block relative ${className}`}>
         <motion.p
           ref={textRef}
           onHoverStart={() => {
@@ -58,7 +58,7 @@ const NavLink = ({ link }: { link: linkType }) => {
               });
             }
           }}
-          className="text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase"
+          className={`text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase ${paragraphStyles}`}
         >
           {link.text}
         </motion.p>

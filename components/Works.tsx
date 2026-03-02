@@ -69,7 +69,7 @@ const Works = () => {
       </div>
 
       {mode == 'grid' && (
-        <div className="w-full flex flex-wrap lg:grid lg:grid-cols-3 gap-3 mt-8">
+        <div className="w-full flex flex-wrap lg:grid lg:grid-cols-3 gap-8 lg:gap-3 mt-8">
           {projects.map((project) => (
             <Grid project={project} />
           ))}

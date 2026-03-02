@@ -55,11 +55,11 @@ export const headerLinks : linkType[] = [
     {
       text: "Archive",
       class: "archive",
-      url: "/archive",
+      url: "https://github.com/abasskoyang",
     },
     {
-      text: "vibe-check",
-      class: "vibe-check",
+      text: "Resume",
+      class: "resume",
       url: "/vibe-check", 
     },
   ];

@@ -6,6 +6,7 @@ const projects : projectType[] = [
         slug: 'digital-ocean',
         title: 'Digital Ocean',
         description: 'A virtual diving experience through digital oceans.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
             "/project-1.png",
             "/project-1.png",
@@ -22,8 +23,9 @@ const projects : projectType[] = [
         slug: 'cosmic-visualizer',
         title: 'Cosmic Visualizer',
         description: 'Interactive visualization of astronomical data.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
-            "/project-1.png",
+            "/project-2.png",
             "/project-1.png",
             "/project-1.png",
             "/project-1.png",
@@ -38,6 +40,7 @@ const projects : projectType[] = [
         slug: 'smart-controller',
         title: 'Smart Controller',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
             "/project-1.png",
             "/project-1.png",
@@ -51,25 +54,27 @@ const projects : projectType[] = [
     },
     {
         id: 3,
-        slug: 'smart-controller',
-        title: 'Smart Controller',
+        slug: 'zentry-clone',
+        title: 'Zentry.com Clone (Animated Landing Page)',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
-            "/project-1.png",
+            "/project-2.png",
             "/project-1.png",
             "/project-1.png",
             "/project-1.png",
             "/project-1.png"
         ],
-         expertise: 'Full Stack',
+        expertise: 'Full Stack',
         techStack: 'Next.Js, TailwindCSS, ShadCN UI, TypeScript, GSAP',
         year: '2025'
     },
     {
         id: 4,
-        slug: 'smart-controller',
+        slug: 'smart-controller-2',
         title: 'Smart Controller',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
             "/project-1.png",
             "/project-1.png",
@@ -77,17 +82,18 @@ const projects : projectType[] = [
             "/project-1.png",
             "/project-1.png"
         ],
-         expertise: 'Full Stack',
+        expertise: 'Full Stack',
         techStack: 'Next.Js, TailwindCSS, ShadCN UI, TypeScript, GSAP',
         year: '2025'
     },
     {
         id: 5,
-        slug: 'smart-controller',
+        slug: 'smart-controller-3',
         title: 'Smart Controller',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
-            "/project-1.png",
+            "/project-2.png",
             "/project-1.png",
             "/project-1.png",
             "/project-1.png",
@@ -99,9 +105,10 @@ const projects : projectType[] = [
     },
     {
         id: 6,
-        slug: 'smart-controller',
+        slug: 'smart-controller-4',
         title: 'Smart Controller',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
             "/project-1.png",
             "/project-1.png",
@@ -115,11 +122,12 @@ const projects : projectType[] = [
     },
     {
         id: 7,
-        slug: 'smart-controller',
+        slug: 'smart-controller-5',
         title: 'Smart Controller',
         description: 'Centralized system for managing smart home devices.',
+        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
         images: [
-            "/project-1.png",
+            "/project-2.png",
             "/project-1.png",
             "/project-1.png",
             "/project-1.png",

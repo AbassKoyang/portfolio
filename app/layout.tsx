@@ -32,7 +32,6 @@ export default function RootLayout({
         <main className="w-full bg-primary-black">
          <CursorFollower />
           {children}
-          <Footer />
         </main>
       </body>
     </html>

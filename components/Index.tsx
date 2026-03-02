@@ -5,17 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue } from "motion/react";
+import { useRouter } from "next/navigation";
 
 const Index = ({ project }: { project: projectType }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter()
+
 
 
   return (
     <motion.div
+    onClick={() => router.push(`/projects/${project.slug}`)}
       ref={containerRef}
-      className="indices relative"
+      className="indices relative cursor-pointer"
       onHoverStart={() => setIsVisible(true)}
       onHoverEnd={() => setIsVisible(false)}
     >

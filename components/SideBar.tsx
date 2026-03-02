@@ -9,21 +9,27 @@ import { usePathname } from 'next/navigation';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-const Navbar = () => {
+const SideBar = () => {
     const [visible, setVisible] = useState(false);
-    const [isOpen, setIsOpen] = useState(false)
     const lastScrollY = useRef(0)
-    const pathname = usePathname()
+    const [isOpen, setIsOpen] = useState(false)
+    const container = useRef(null)
 
     useEffect(() => {
         const handleScroll = () => {
           const currentScrollY = window.scrollY
     
           if (currentScrollY <= 0) {
+            setVisible(false)
+            lastScrollY.current = currentScrollY
             return
           }
     
-          if (currentScrollY >= (pathname == '/' ? window.innerHeight : 40)) {
+          if (Math.abs(currentScrollY - lastScrollY.current) < 15) {
+            return
+          }
+    
+          if (currentScrollY < lastScrollY.current) {
             setVisible(true)
           } 
           else {
@@ -112,45 +118,28 @@ const Navbar = () => {
     }
 
   return (
-    <motion.header initial={false} animate={{y: visible ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className={`w-full fixed top-0 left-0 md:border-b border-primary-white/30 z-[1000] bg-primary-black py-4 px-8`}>
-        <div className="items-center justify-between w-full flex">
-            <div className="">
+    <motion.header ref={container} initial={false} animate={{x: visible ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className={`h-full fixed top-0 left-0 md:border-r border-primary-white/30 z-300 bg-primary-black py-8 px-4`}>
+        <div className="items-center justify-between w-full h-full flex flex-col-reverse">
+            <div className="[writing-mode:vertical-rl] rotate-180">
                 <Link href='/'>
                     <p className='font-fragment-mono font-bold text-xl text-primary-white uppercase'>Koyang©</p>
                 </Link>
                 <Clock />
             </div>
 
-            <div className="lg:flex items-center gap-12 hidden">
-                <nav className="flex items-center gap-12 flex-row">
+            <div className="lg:flex items-center flex-col gap-3 hidden">
+                <nav className="flex items-center gap-3 flex-col">
                     {headerLinks.map((link, i) => (
-                        <NavLink link={link} key={i} />
+                        <NavLink link={link} key={i} className='[writing-mode:vertical-rl] rotate-180' />
                     ))}
                 </nav>
-                <div className="">
-                    <p className="text-sm text-primary-white uppercase">CONTACT</p>
-                    <NavLink link={emailLink} />
-                </div>
-                <div className=" flex flex-col items-start">
-                    {socialLinks.map((link, i) => (
-                        <NavLink link={link} key={i} />
-                    ))}
-                </div>
-
-                <div className="flex flex-col items-end">
-                    <button>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
-                    </button>
-                    <button>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#fffff]</p>
-                    </button>
-                </div>
             </div>
-            <button onClick={() => setIsOpen(true)} className='block lg:hidden [writing-mode:vertical-rl] rotate-180'>
-                <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase'>menu</motion.p>
+            <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
+                <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 mr-[-20px]'>menu</motion.p>
             </button>
         </div>
-         <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu">
+
+        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu">
          <div className="w-full h-full relative">
               <div className="w-full flex items-start justify-between">
                   <div className="slide">
@@ -180,8 +169,8 @@ const Navbar = () => {
               </div>
          </div>
       </motion.div>
-  </motion.header>
+    </motion.header>
   )
 }
 
-export default Navbar
+export default SideBar
