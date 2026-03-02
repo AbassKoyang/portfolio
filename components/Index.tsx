@@ -37,8 +37,8 @@ const Index = ({ project }: { project: projectType }) => {
           </div>
           <div className="w-[35%]">
             <p className="text-primary-white font-fragment-mono text-sm uppercase">
-              {project.techStack.length > 50
-                ? project.techStack + "..."
+              {project.techStack.length > 80
+                ? project.techStack.substring(0,80) + "..."
                 : project.techStack}
             </p>
           </div>

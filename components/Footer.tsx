@@ -26,11 +26,11 @@ const Footer = () => {
 
   return (
     <footer className='w-full p-8 flex flex-row-reverse lg:flex-row items-start lg:items-center justify-between mt-20 relative'>
-        <Link href='/' className='mt-8 lg:mt-0'>
+        <Link href='/' className=''>
             <motion.p 
             onHoverStart={() => handleScrambleText('.logo', 'Koyang©', 'ltr')}
             onHoverEnd={() => handleScrambleText('.logo', 'Koyang©', 'rtl')}
-            className='font-fragment-mono font-bold text-2xl lg:text-4xl text-primary-white uppercase logo rotate-270 lg:rotate-0'
+            className='font-fragment-mono font-bold text-2xl lg:text-4xl text-primary-white uppercase logo [writing-mode:vertical-rl] rotate-180 lg:[writing-mode:horizontal-rl] lg:rotate-0'
             >Koyang©</motion.p>
         </Link>
         <nav className="flex items-start lg:items-center gap-0.5 lg:gap-12 flex-col lg:flex-row">
@@ -38,7 +38,7 @@ const Footer = () => {
                <NavLink link={link} key={i} />
             ))}
         </nav>
-        <Link href='#' className='hidden lg:block'>
+        <Link href='#top' className='hidden lg:block'>
             <motion.p  className='text-primary-white font-fragment-mono text-sm uppercase'>BACK TO TOP [^]</motion.p>
         </Link>
     </footer>

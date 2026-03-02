@@ -142,7 +142,7 @@ const Navbar = () => {
                         <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
                     </button>
                     <button>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#fffff]</p>
+                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
                     </button>
                 </div>
             </div>
@@ -150,7 +150,7 @@ const Navbar = () => {
                 <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase'>menu</motion.p>
             </button>
         </div>
-         <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu">
+         <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
          <div className="w-full h-full relative">
               <div className="w-full flex items-start justify-between">
                   <div className="slide">
@@ -175,7 +175,7 @@ const Navbar = () => {
                       <p className='text-primary-white font-fragment-mono text-xs uppercase'>Sound [off]</p>
                   </button>
                   <button>
-                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>color [#fffff]</p>
+                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>color [#00000]</p>
                   </button>
               </div>
          </div>

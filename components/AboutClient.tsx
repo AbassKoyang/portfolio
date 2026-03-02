@@ -119,7 +119,7 @@ const AboutClient = () => {
                         <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
                     </Link>
                     <Link href='#'>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#fffff]</p>
+                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
                     </Link>
                 </div>
             </div>
@@ -127,7 +127,7 @@ const AboutClient = () => {
                 <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 mr-[-20px]'>menu</motion.p>
             </button>
         </div>
-        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu">
+        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
          <div className="w-full h-full relative">
               <div className="w-full flex items-start justify-between">
                   <div className="slide">
@@ -152,7 +152,7 @@ const AboutClient = () => {
                       <p className='text-primary-white font-fragment-mono text-xs uppercase'>Sound [off]</p>
                   </button>
                   <button>
-                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>color [#fffff]</p>
+                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>color [#00000]</p>
                   </button>
               </div>
          </div>
@@ -165,25 +165,30 @@ const AboutClient = () => {
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPERS'S_BIO:</h4>
                     <div className="">
                         <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// GET TO KNOW Koyang</p>
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-[300px]'>I’m Koyang Ahmad Abass — a Nigerian born designer exploring the spaces where motion, brand identity, and interactivity meet.</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-[300px]'> I’m Koyang, a fullstack developer building scalable systems and high-performance web experiences. I care about clean architecture, 
+                    thoughtful UI, and backend logic that actually makes sense.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>EARLY CHILDHOOD:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>I grew up listening to Highlife music on my grandma's old radio, with childhood days spent playing street football, reenacting WWE, and chasing adventures. Quiet but curious, I found my passion for design by sketching typography in the backs of my high school notebooks.</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion i continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPER PHILOSOPHY:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>I believe in the power of experimentation, collaboration, and creative play. Anddd I always say yes to creative collaborations I f*ck with :)</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'> Discipline. Consistency. Curiosity. Simplicity. Faith.
+                    I approach development the same way I approach life. Structured, intentional,
+                    and always improving.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>INTERESTS & HOBBIES:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>Outside of design, I’m into learning about Art History & Design Culture, discovering new music, and building visual archives on my are.na.</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>When I’m not coding, I’m watching or playing football, training, 
+                    listening to music, or reflecting. My faith plays a central role 
+                    in how I move,  grounded, focused, and purpose-driven.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
@@ -207,27 +212,27 @@ const AboutClient = () => {
             </div>
 
             
-            <div className="lg:w-[30%] w-full flex flex-col items-end lg:pl-26 mt-16 lg:mt-0">
+            <div className="lg:w-[40%] w-full flex flex-col items-end lg:pl-26 mt-16 lg:mt-0">
                 <div className="w-full">
                     <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// EDUcation</p>
                 </div>
-                <div className="w-full flex items-start lg:justify-end">
-                    <div className="">
-                        <div className="flex items-center gap-20 mt-2">
+                <div className="w-full flex items-start lg:justify-start">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>BSc Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>Bayero University, Kano</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Diploma of Computer Science,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>EkoBits ICT Academy, Lagos</p> 
                             </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023 - 2024</p> 
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex items-start lg:justify-end mt-5">
-                    <div className="">
-                        <div className="flex items-center gap-20">
+                <div className="w-full flex items-start lg:justify-start mt-5">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>BSc Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>Bayero University, Kano</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>BSc Computer Science,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Bayero University, Kano</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
                         </div>
@@ -240,19 +245,19 @@ const AboutClient = () => {
                         <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ Instagram
                         </Link>
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='https://x.com/realabasskoyang' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ X(Formerly Twitter)
                         </Link>
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='https://linkedin.com/in/abass-ahmad' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ LinkedIn
                         </Link>
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='mailto:abasskoyang05@gmail.com' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ abasskoyang05@gmail.com
                         </Link>
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='https://github.com/abasskoyang' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ Github
                         </Link>
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='https://app.usebraintrust.com/talent/2027794/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ Braintrust
                         </Link>
                     </div>

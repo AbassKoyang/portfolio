@@ -54,19 +54,19 @@ const projects : projectType[] = [
     },
     {
         id: 3,
-        slug: 'zentry-clone',
-        title: 'Zentry.com Clone (Animated Landing Page)',
-        description: 'Centralized system for managing smart home devices.',
-        overview: 'Abstract is a Human–Computer Interaction (HCI) lab building AbstractOS, a platform designed to embed AI seamlessly into everyday human interaction through speech, sight, touch, and gesture.',
+        slug: 'shoppe-pwa',
+        title: 'Shoppe',
+        description: 'Shopee is a full-stack e-commerce marketplace built with Next.js, featuring product catalogs, chat, payments, and seller dashboards.',
+        overview: 'Shopee is a full-featured e-commerce marketplace platform with product browsing by categories/subcategories, user profiles, orders/sales management, chat/inbox, payments (cards/banks via Paystack), search (Algolia), notifications, and settings. Supports buying/selling, product management, real-time chat via Socket.io, and Firebase integration.',
         images: [
-            "/project-2.png",
-            "/project-1.png",
-            "/project-1.png",
-            "/project-1.png",
-            "/project-1.png"
+            "/shoppe-1.png",
+            "/shoppe-1.png",
+            "/shoppe-1.png",
+            "/shoppe-1.png",
+            "/shoppe-1.png"
         ],
         expertise: 'Full Stack',
-        techStack: 'Next.Js, TailwindCSS, ShadCN UI, TypeScript, GSAP',
+        techStack: 'Next.js 15 (App Router), TailwindCSS 4, Shadcn UI (with Radix UI, class-variance-authority), TypeScript, GSAP + Framer Motion, TanStack Query, React Hook Form + Zod, Firebase, Mastra, Express.js (server), BullMQ/Redis (queues), Socket.io, Algolia, Paystack, Next Cloudinary, React Email/Resend, Lucide icons',
         year: '2025'
     },
     {

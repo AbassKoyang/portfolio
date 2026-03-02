@@ -62,11 +62,17 @@ const Hero = () => {
         stagger: 0.1,
         }, "<0.5");
 
+        tl.to('.mobile-heading', {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.inOut'
+        }, '<')
+
         tl.to('.svg-logo', {
             opacity: 1,
             duration: 1,
             ease: 'power2.inOut'
-        })
+        }, '<')
         tl.to('.credit', {
             opacity: 1,
             duration: 0.8,
@@ -86,7 +92,7 @@ const Hero = () => {
     return (
     <div ref={container} className='w-full min-h-screen flex items-center justify-center relative'>
          <div className="w-full h-screen bg-primary-white z-20 fixed top-0 left-0 flex items-center justify-center pointer-events-none loading-screen">
-            <p><span className='welcome-text-1'>Tomorrow's</span> <span className='welcome-text-2'>Brands,</span> <span className='welcome-text-3'>Today</span></p>
+            <p><span className='welcome-text-1'>Discipline.</span> <span className='welcome-text-2'>Precision.</span> <span className='welcome-text-3'>Execution.</span></p>
          </div>
          <div ref={overlayContainer} className="w-full h-screen bg-primary-white z-30 absolute top-0 left-0 flex items-center justify-center">
            <div className="relative w-full min-h-full">
@@ -123,8 +129,8 @@ const Hero = () => {
                             <Clock />
                         </div>
 
-                        <div className="flex items-center gap-12 flex-wrap">
-                            <nav className="flex items-center gap-12 flex-row">
+                        <div className="flex items-center lg:gap-12 gap-8 flex-wrap">
+                            <nav className="flex items-center lg:gap-12 gap-8 flex-row">
                                 {headerLinks.map((link, i) => (
                                     <NavLink link={link} key={i} />
                                 ))}
@@ -144,7 +150,7 @@ const Hero = () => {
                                     <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
                                 </Link>
                                 <Link href='#'>
-                                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#fffff]</p>
+                                    <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
                                 </Link>
                             </div>
                         </div>

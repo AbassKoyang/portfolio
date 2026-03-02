@@ -168,7 +168,8 @@ const ProjectClient = ({
               className="
                 absolute top-0 left-0
                 w-full h-full
-                bg-primary-white/10
+                bg-primary-white/30
+                mix-blend-difference
                 scale-x-0 origin-left
                 will-change-transform
                 -z-10

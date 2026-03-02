@@ -67,7 +67,7 @@ const Grid = ({project}:{project: projectType}) => {
                 -translate-x-1/2
                 -translate-y-1/2
                 text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase
-                z-[10000]
+                z-[1000]
                 opacity-0
             "
             >[view project]</p>
@@ -81,11 +81,11 @@ const Grid = ({project}:{project: projectType}) => {
         alt='Profle Picture'
         />
         <div className="size-full absolute top-0 left-0 hidden lg:flex opacity-60 bg-black z-30 group-hover:opacity-0 ease-in-out duration-500 transition-all items-center justify-center">
-            <p className='text-primary-white font-fragment-mono text-2xl uppercase font-semibold'>{project.title}</p>
+            <p className='text-primary-white font-fragment-mono text-2xl uppercase font-semibold mix-blend-difference'>{project.title}</p>
         </div>
         <div className="flex items-center gap-1 absolute top-5 left-5 group-hover:opacity-100 lg:opacity-0">
-            <div className="size-1 lg:size-1.5 title-box opacity-30 bg-white"></div>
-            <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase'>{project.title}</p>
+            <div className="size-1 lg:size-1.5 title-box opacity-30 bg-primary-white mix-blend-difference"></div>
+            <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase mix-blend-difference'>{project.title}</p>
         </div>
     </motion.div>
   )
