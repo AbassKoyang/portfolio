@@ -140,13 +140,13 @@ const ProjectClient = ({
           ref={projectnavRef}
           className="
             fixed top-0 left-[50%] -translate-x-[50%]
-            w-[70%] md:w-[70%]
+            w-[100%] md:w-[70%]
             flex justify-between gap-8
             p-4 z-20 opacity-0
           "
         >
           <Link href={`/projects/${prevProject.slug}`} className="flex items-center gap-2 px-4 bg-primary-white">
-            <span className="relative -top-[0.075em] text-base font-medium">
+            <span className="relative -top-[0.075em] text-xs lg:text-base font-medium">
               &#8592;
             </span>
             <p

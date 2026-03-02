@@ -11,6 +11,7 @@ import Profile from './Profile'
 import Footer from './Footer';
 import ReactLenis from 'lenis/react';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 
 const ProjectsClient = () => {
@@ -101,8 +102,8 @@ const ProjectsClient = () => {
                     <Clock />
                 </div>
 
-                <div className="lg:flex items-center gap-12 hidden">
-                    <nav className="flex items-center gap-12 flex-row">
+                <div className="lg:flex items-center gap-8 lg:gap-12 hidden">
+                    <nav className="flex items-center gap-8 lg:gap-12 flex-row">
                         {headerLinks.map((link, i) => (
                             <NavLink link={link} key={i} />
                         ))}

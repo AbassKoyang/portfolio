@@ -8,6 +8,7 @@ import NavLink from './Link'
 import Navbar from './Navbar';
 import ReactLenis from 'lenis/react';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const AboutClient = () => {
     const [isOpen, setIsOpen] = useState(false)

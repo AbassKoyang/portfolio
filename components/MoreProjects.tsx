@@ -56,9 +56,9 @@ const MoreProjects = () => {
                     ))}
             </div>
         </div>
-        <div className="w-full">
+        <div className="w-full lg:hidden">
             <h5 className='text-primary-white font-fragment-mono text-xs uppercase'>More_Projects</h5>
-            <div className="w-full flex flex-wrap lg:hidden gap-8 mt-2">
+            <div className="w-full flex flex-wrap gap-8 mt-2">
             {projects.map((project) => (
                 <Grid project={project} />
             ))}
