@@ -37,7 +37,7 @@ const Clock = () => {
           
   return (
     <div className="flex items-center gap-3">
-        <p className='text-primary-white font-fragment-mono text-xs lg:text-sm'>{hour}:{Number(minute) < 10 ? `0${minute}` : minute}:{Number(second) < 10 ? `0${second}` : second }</p>
+        <p className='text-primary-white font-fragment-mono text-xs lg:text-sm'>{hour ? hour : '0'}:{minute ? Number(minute) < 10 ? `0${minute}` : minute : '00'}:{second ? Number(second) < 10 ? `0${second}` : second : '00' }</p>
         <p className='text-primary-white font-fragment-mono text-xs lg:text-sm'> {Number(hour) > 11 ? 'PM' : 'AM'}</p>
         <p className='text-primary-white font-fragment-mono text-xs lg:text-sm'>{timezone}</p>
     </div>
