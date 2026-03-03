@@ -253,7 +253,7 @@ const ProjectClient = ({
 
                 <div className="w-full py-8 h-fit bg-primary-black sticky block lg:hidden">
                     <h1 className='text-primary-white font-semibold text-3xl tracking-tighter'>{project.title}</h1>
-                    <Link href={project.slug}  className='text-primary-white font-mono text-sm uppercase font-medium'>view project <span className='text-lg'>↗</span></Link>
+                    <Link href={project.url}  className='text-primary-white font-mono text-sm uppercase font-medium'>view project <span className='text-lg'>↗</span></Link>
                     <div className="w-full mt-4">
                         <h5 className='text-primary-white/50 font-fragment-mono text-sm uppercase'>Overview</h5>
                         <p className='text-primary-white font-mono text-xs font-medium mt-2'>
