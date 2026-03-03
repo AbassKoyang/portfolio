@@ -16,34 +16,33 @@ const SideBar = () => {
     const container = useRef(null)
 
     useEffect(() => {
+        let lastScrollY = window.scrollY
+        let scrollAccumulator = 0
+        const threshold = 100
+      
         const handleScroll = () => {
           const currentScrollY = window.scrollY
-    
-          if (currentScrollY <= 0) {
+          const delta = currentScrollY - lastScrollY
+      
+          scrollAccumulator += delta
+      
+          // scrolling down
+          if (scrollAccumulator > threshold) {
             setVisible(false)
-            lastScrollY.current = currentScrollY
-            return
+            scrollAccumulator = 0
           }
-    
-          if (Math.abs(currentScrollY - lastScrollY.current) < 100) {
-            return
-          }
-    
-          if (currentScrollY < lastScrollY.current) {
+      
+          // scrolling up
+          if (scrollAccumulator < -threshold) {
             setVisible(true)
-          } 
-          else {
-            setVisible(false)
+            scrollAccumulator = 0
           }
-    
-          lastScrollY.current = currentScrollY
+      
+          lastScrollY = currentScrollY
         }
-    
+      
         window.addEventListener('scroll', handleScroll, { passive: true })
-    
-        return () => {
-          window.removeEventListener('scroll', handleScroll)
-        }
+        return () => window.removeEventListener('scroll', handleScroll)
       }, [])
 
       useGSAP(() => {

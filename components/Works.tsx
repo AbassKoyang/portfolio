@@ -48,10 +48,6 @@ const Works = () => {
         y: 0,
         ease: 'expo.inOut',
         stagger: 0.1,
-        scrollTrigger: {
-          trigger: container.current,
-          start: 'top center'
-        }
       })
   }, { scope: container, dependencies: [mode] })
 
@@ -70,7 +66,7 @@ const Works = () => {
 
       {mode == 'grid' && (
         <div className="w-full flex flex-wrap lg:grid lg:grid-cols-3 gap-8 lg:gap-3 mt-8">
-          {projects.map((project) => (
+          {projects.slice(0,8).map((project) => (
             <Grid project={project} />
           ))}
         </div>

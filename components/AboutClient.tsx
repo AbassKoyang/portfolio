@@ -115,12 +115,12 @@ const AboutClient = () => {
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <Link href='#'>
+                    <button>
                         <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
-                    </Link>
-                    <Link href='#'>
+                    </button>
+                    <button>
                         <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
-                    </Link>
+                    </button>
                 </div>
             </div>
             <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
@@ -240,9 +240,46 @@ const AboutClient = () => {
                 </div>
 
                 <div className="w-full mt-10">
+                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// Certifications</p>
+                </div>
+                <div className="w-full flex items-start lg:justify-start">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Andela x Meta React Learning Program Certification,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Meta x Andela</p> 
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023</p> 
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full flex items-start lg:justify-start">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp JavaScript Algorithms And Data Structures Certifications,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp</p> 
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full flex items-start lg:justify-start">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Python Algorithms And Data Structures Certifications,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp</p> 
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full mt-10">
                     <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// CONTACT & SOCIAL LINKS</p>
                     <div className="w-full flex items-center justify-between flex-wrap gap-1">
-                        <Link href='/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
+                        <Link href='https://instagram.com/le_chatelier69' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
                         ↗ Instagram
                         </Link>
                         <Link href='https://x.com/realabasskoyang' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>

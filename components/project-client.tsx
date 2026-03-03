@@ -204,7 +204,7 @@ const ProjectClient = ({
               left-1/2 -translate-x-1/2 -translate-y-1/2
               text-center text-xs lg:text-base font-medium
               opacity-0
-              text-primary-white max-w-full lg:max-w-[500px] px-4
+              text-primary-white w-full max-w-full lg:max-w-[500px] px-4
             "
           >
             {project.description}
@@ -283,7 +283,7 @@ const ProjectClient = ({
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
-                        src={project.images[2]}
+                        src={project.images[3]}
                         loading='eager'
                         placeholder='blur'
                         blurDataURL='/assets/images/default-avatar.png'
@@ -294,7 +294,7 @@ const ProjectClient = ({
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
-                        src={project.images[3]}
+                        src={project.images[4]}
                         loading='eager'
                         placeholder='blur'
                         blurDataURL='/assets/images/default-avatar.png'
@@ -306,7 +306,18 @@ const ProjectClient = ({
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
-                    src={project.images[1]}
+                    src={project.images[5]}
+                    loading='eager'
+                    placeholder='blur'
+                    blurDataURL='/assets/images/default-avatar.png'
+                    alt='Project Image'
+                    />
+                </div>
+                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <Image
+                    className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                    fill
+                    src={project.images[6]}
                     loading='eager'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
@@ -316,7 +327,7 @@ const ProjectClient = ({
             </div>
             <div className="w-[30%] pl-12 pt-14 h-fit bg-primary-black sticky top-[45px] hidden lg:block">
                 <h1 className='text-primary-white font-semibold text-3xl tracking-tighter'>{project.title}</h1>
-                <Link href={project.slug}  className='text-primary-white font-mono text-sm uppercase font-medium'>view project <span className='text-lg'>↗</span></Link>
+                <Link href={project.url}  className='text-primary-white font-mono text-sm uppercase font-medium'>view project <span className='text-lg'>↗</span></Link>
                 <div className="w-full mt-4">
                     <h5 className='text-primary-white/50 font-fragment-mono text-sm uppercase'>Overview</h5>
                     <p className='text-primary-white font-mono text-xs font-medium mt-2'>

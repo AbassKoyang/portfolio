@@ -119,12 +119,12 @@ const ProjectsClient = () => {
                     </div>
 
                     <div className="flex flex-col items-end">
-                        <Link href='#'>
+                        <button>
                             <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
-                        </Link>
-                        <Link href='#'>
+                        </button>
+                        <button>
                             <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
-                        </Link>
+                        </button>
                     </div>
                 </div>
                 <button onClick={() => setIsOpen(true)} className='block lg:hidden'>

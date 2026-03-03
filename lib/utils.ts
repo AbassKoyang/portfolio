@@ -60,7 +60,7 @@ export const headerLinks : linkType[] = [
     {
       text: "Resume",
       class: "resume",
-      url: "/vibe-check", 
+      url: "https://docs.google.com/document/d/1j2ohBWIdIP2UjRzn9lMYXF9SEgbTpV-t_rqsx5JzcLA/edit?usp=sharing", 
     },
   ];
 

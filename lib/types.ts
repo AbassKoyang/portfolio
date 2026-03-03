@@ -1,5 +1,6 @@
 export type projectType = {
     id: number;
+    url: string;
     slug: string;
     title: string;
     description: string;
