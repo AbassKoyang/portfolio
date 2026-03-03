@@ -132,7 +132,7 @@ const ProjectsClient = () => {
                 </button>
             </div>
 
-            <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
+            <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-dvh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
          <div className="w-full h-full relative">
               <div className="w-full flex items-start justify-between">
                   <div className="slide">

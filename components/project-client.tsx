@@ -180,7 +180,7 @@ const ProjectClient = ({
             </p>
           </div>
 
-          <Link href={`/projects/${prevProject.slug}`} className="flex items-center gap-2 px-4 bg-primary-white">
+          <Link href={`/projects/${nextProject.slug}`} className="flex items-center gap-2 px-4 bg-primary-white">
             <span className="relative -top-[0.075em] text-base font-medium">
               &#8594;
             </span>
@@ -211,16 +211,18 @@ const ProjectClient = ({
           </p>
         </div>
 
-        <div className="w-full h-[300px] lg:h-screen overflow-hidden relative">
-            <Image
-            className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
-            fill
-            src={project.images[0]}
-            loading='eager'
-            placeholder='blur'
-            blurDataURL='/assets/images/default-avatar.png'
-            alt='Project Image'
-            />
+        <div className="w-full px-4 lg:p-0">
+          <div className="w-full h-[300px] lg:h-screen overflow-hidden relative">
+              <Image
+              className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+              fill
+              src={project.images[0]}
+              loading='eager'
+              placeholder='blur'
+              blurDataURL='/assets/images/default-avatar.png'
+              alt='Project Image'
+              />
+          </div>
         </div>
 
         <div className="mt-5 lg:mt-10 w-full flex px-4">

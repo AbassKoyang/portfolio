@@ -62,9 +62,9 @@ const Index = ({ project }: { project: projectType }) => {
           <motion.div
           ref={imageRef}
             key="image-box"
-            initial={{ opacity: project.id == 0 || project.id == 7 ? 0 : 1, scale: project.id == 0 || project.id == 7 ? 0 : 1 }}
+            initial={{ opacity: project.id == 0 || project.id == 9 ? 0 : 1, scale: project.id == 0 || project.id == 7 ? 0 : 1 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: project.id == 0 || project.id == 7 ? 0 : 1, scale: project.id == 0 || project.id == 7 ? 0 : 1 }}
+            exit={{ opacity: project.id == 0 || project.id == 9 ? 0 : 1, scale: project.id == 0 || project.id == 7 ? 0 : 1 }}
             transition={{
               duration: 0.8,
               ease: [0, 0.71, 0.2, 1.01],

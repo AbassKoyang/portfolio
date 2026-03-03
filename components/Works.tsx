@@ -1,3 +1,4 @@
+'use client';
 import projects from '@/app/projects'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -8,11 +9,13 @@ import Index from './Index';
 import CursorFollower from './Cursor';
 import Grid from './Grid';
 import { ScrollTrigger } from 'gsap/all';
+import { usePathname } from 'next/navigation';
 
 gsap.registerPlugin(ScrollTrigger)
 const Works = () => {
   const container = useRef(null);
   const [mode, setMode] = useState<'index' | 'grid'>('grid');
+  const pathname = usePathname()
 
     useGSAP(() => {
       gsap.to('.available-box', {
@@ -66,7 +69,7 @@ const Works = () => {
 
       {mode == 'grid' && (
         <div className="w-full flex flex-wrap lg:grid lg:grid-cols-3 gap-8 lg:gap-3 mt-8">
-          {projects.slice(0,8).map((project) => (
+          {projects.map((project) => (
             <Grid project={project} />
           ))}
         </div>
@@ -97,7 +100,7 @@ const Works = () => {
       </div>
       )}
 
-      <div className="mt-8">
+      <div className={`mt-8 ${pathname == '/projects' ? 'hidden' : 'block'}`}>
         <Link href='/projects' className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase px-4 py-2 border border-primary-white rounded-md mt'>View all projects</Link>
       </div>
       

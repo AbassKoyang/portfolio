@@ -83,7 +83,7 @@ const Profile = () => {
         </div>
         <div className="w-full lg:w-[75%] flex flex-row flex-wrap items-start justify-between">
             <div className="w-[50%] lg:w-[30%] flex flex-row items-start lg:flex-col gap-5">
-                <p className='text-primary-white/50 font-fragment-mono text-[10px] lg:text-sm uppercase tech-stack'>Tech stack</p>
+                <p className='text-primary-white/50 font-fragment-mono text-[10px] lg:text-sm uppercase opacity-0 tech-stack'>Tech stack</p>
                 <div className="">
                     <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase mt-0 lg:mt-5  opacity-0 tech-stack'>TypeScript</p>
                     <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase mt-3  opacity-0 tech-stack'>React</p>

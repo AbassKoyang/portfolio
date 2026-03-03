@@ -92,7 +92,7 @@ const Hero = () => {
     return (
     <div ref={container} className='w-full min-h-screen flex items-center justify-center relative'>
          <div className="w-full h-screen bg-primary-white z-20 fixed top-0 left-0 flex items-center justify-center pointer-events-none loading-screen text-sm">
-            <p><span className='welcome-text-1'>Discipline.</span> <span className='welcome-text-2'>Precision.</span> <span className='welcome-text-3'>Execution.</span></p>
+            <p><span className='welcome-text-1'>Build.</span> <span className='welcome-text-2'>Refine.</span> <span className='welcome-text-3'>Ship.</span></p>
          </div>
          <div ref={overlayContainer} className="w-full h-screen bg-primary-white z-30 absolute top-0 left-0 flex items-center justify-center">
            <div className="relative w-full min-h-full">

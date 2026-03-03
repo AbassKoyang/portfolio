@@ -9,7 +9,7 @@ const projects : projectType[] = [
         description: 'A modern blogging and content discovery platform for writers and readers.',
         overview: 'Inspirely is a content creation and sharing platform that enables writers and creators to publish, discover, and connect through meaningful storytelling. It provides a rich writing experience with community features like following, trending topics, notifications, and search functionality.',
         images: [
-            "/inspirely-1.png",
+            "/inspirely-thumbnail.png",
             "/inspirely-2.png",
             "/inspirely-3.png",
             "/inspirely-4.png",
@@ -89,7 +89,7 @@ const projects : projectType[] = [
         description: 'A modern web application simplifying cross-border payments for international students.',
         overview: 'Pay4Me is a modern web application simplifying cross-border payments for international students, enabling fast tuition, school fees, SEVIS, WES, visa applications, and more to universities, businesses, and agencies.',
         images: [
-            "/pay4me-thumbnail.png",
+            "/pay4me-8.png",
             "/pay4me-1.png",
             "/pay4me-3.png",
             "/pay4me-4.png",
@@ -163,23 +163,43 @@ const projects : projectType[] = [
     },
     {
         id: 8,
-        url: 'https://apple-website-clone-rho.vercel.app/',
+        url: 'https://apple-fifteen-pro.vercel.app/',
         slug: 'apple-website',
         title: 'Apple Website',
         description: 'A premium Apple iPhone 15 Pro product showcase website featuring interactive 3D models, immersive animations, and dynamic video highlights.',
         overview: 'A premium Apple iPhone 15 Pro product showcase website featuring interactive 3D models, immersive animations, and dynamic video highlights. The platform demonstrates cutting-edge UI/UX design with seamless navigation through product features including the A17 Pro chip, titanium construction, advanced camera system, and the innovative Action button.',
         images: [
-            "/velvet-1.png",
-            "/velvet-2.png",
-            "/velvet-3.png",
-            "/velvet-4.png",
-            "/velvet-5.png",
-            "/velvet-6.png",
-            "/velvet-7.png",
+            "/apple-1.png",
+            "/apple-2.png",
+            "/apple-3.png",
+            "/apple-4.png",
+            "/apple-5.png",
+            "/apple-6.png",
+            "/apple-7.png",
         ],
          expertise: 'Front-End',
         techStack: 'React, Vite, TailwindCSS, GSAP, Three.js, React Three Fiber, Swiper, React Icons',
         year: '2025'
+    },
+    {
+        id: 9,
+        url: 'https://pix-splash.vercel.app/',
+        slug: 'pixsplash',
+        title: 'PixSplash',
+        description: 'a free stock photos website where users can browse, save images to collections, add favorites, download images, and share collections',
+        overview: 'PixSplash is a free stock photos website where users can browse, save images to collections, add favorites, download images, and share collections. Built with Next.js, TailwindCSS, Headless UI, and MongoDB.',
+        images: [
+            "/pixsplash-1.png",
+            "/pixsplash-2.png",
+            "/pixsplash-3.png",
+            "/pixsplash-4.png",
+            "/pixsplash-5.png",
+            "/pixsplash-1.png",
+            "/pixsplash-2.png",
+        ],
+         expertise: 'Full Stack',
+        techStack: 'Next.js 13, React 18, TailwindCSS, Headless UI, Redux Toolkit, Framer Motion, MongoDB, Mongoose, NextAuth, React Hook Form, React Hot Toast, React Icons, React Masonry CSS',
+        year: '2023'
     }
 ]
 

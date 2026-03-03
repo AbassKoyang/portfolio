@@ -23,7 +23,27 @@ export const metadata: Metadata = {
       capable: true,
       statusBarStyle: "default",
       title: "Koyang Abass",
-    }
+    },
+    openGraph: {
+      title: "Koyang | Fullstack Developer",
+      description: "Fullstack developer building scalable web systems.",
+      url: "https://koyang.vercel.app",
+      siteName: "Koyang",
+      images: [
+        {
+          url: "https://koyang.vercel.app/icon-512.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Koyang | Fullstack Developer",
+      description: "Fullstack developer building scalable web systems.",
+      images: ["https://koyang.vercel.app/icon-512.png"]
+    },
 };
 
 export default function RootLayout({

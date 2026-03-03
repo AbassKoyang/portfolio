@@ -127,7 +127,7 @@ const AboutClient = () => {
                 <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 mr-[-20px]'>menu</motion.p>
             </button>
         </div>
-        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-svh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
+        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-dvh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
          <div className="w-full h-full relative">
               <div className="w-full flex items-start justify-between">
                   <div className="slide">
@@ -166,13 +166,13 @@ const AboutClient = () => {
                     <div className="">
                         <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// GET TO KNOW Koyang</p>
                         <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-[300px]'> I’m Koyang, a fullstack developer building scalable systems and high-performance web experiences. I care about clean architecture, 
-                    thoughtful UI, and backend logic that actually makes sense.</p>
+                    thoughtful UI and UX.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>EARLY CHILDHOOD:</h4>
+                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>EARLY CAREER:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion i continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion I continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
