@@ -19,9 +19,6 @@ const Hero = () => {
         const tl = gsap.timeline({
             delay: 1
         })
-        tl.set(overlayContainer.current, {
-            opacity: 0
-        })
         tl.from('.welcome-text-1', {
             opacity: 0,
             duration: 1,
@@ -94,7 +91,7 @@ const Hero = () => {
          <div className="w-full h-screen bg-primary-white z-20 fixed top-0 left-0 flex items-center justify-center pointer-events-none loading-screen text-sm">
             <p><span className='welcome-text-1'>Build.</span> <span className='welcome-text-2'>Refine.</span> <span className='welcome-text-3'>Ship.</span></p>
          </div>
-         <div ref={overlayContainer} className="w-full h-screen bg-primary-white z-30 absolute top-0 left-0 flex items-center justify-center">
+         <div ref={overlayContainer} className="w-full h-screen bg-primary-white z-30 absolute top-0 left-0 flex items-center justify-center opacity-0">
            <div className="relative w-full min-h-full">
                 <div className="w-full flex items-start justify-center absolute top-15 lg:top-5 left-[50%] translate-x-[-50%] z-30 p-8">
                     <div className="w-full flex flex-col justify-start items-start lg:items-center max-w-fit">

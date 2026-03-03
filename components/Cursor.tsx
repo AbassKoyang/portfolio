@@ -41,6 +41,7 @@ export default function CursorFollower() {
     <div
       ref={cursorRef}
       className="
+      hidden lg:block
         pointer-events-none
         fixed
         top-0

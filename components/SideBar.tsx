@@ -20,7 +20,7 @@ const Navbar = () => {
             const currentScrollY = window.scrollY
   
             if (currentScrollY <= 0) {
-              setVisible(true)
+              setVisible(false)
               lastScrollY.current = currentScrollY
               return
             }

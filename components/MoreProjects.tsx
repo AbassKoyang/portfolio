@@ -62,7 +62,7 @@ const MoreProjects = ({currentProject}:{currentProject: projectType}) => {
         <div className="w-full lg:hidden">
             <h5 className='text-primary-white font-fragment-mono text-sm uppercase'>More_Projects</h5>
             <div className="w-full flex flex-wrap gap-6 mt-4">
-            {projects.map((project) => (
+            {moreProjects.map((project) => (
                 <Grid project={project} />
             ))}
             </div>
