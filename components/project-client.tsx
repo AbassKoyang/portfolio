@@ -212,9 +212,9 @@ const ProjectClient = ({
         </div>
 
         <div className="w-full px-4 lg:p-0">
-          <div className="w-full h-75 lg:h-screen overflow-hidden relative">
+          <div className="w-full h-75 lg:h-screen overflow-hidden relative group">
               <Image
-              className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+              className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
               fill
               src={project.images[0]}
               loading='eager'
@@ -227,9 +227,9 @@ const ProjectClient = ({
 
         <div className="mt-5 lg:mt-10 w-full flex px-4">
             <div className="w-full lg:w-[70%] bg-primary-black">
-                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group">
                 <Image
-                    className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                    className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[1]}
                     loading='eager'
@@ -239,9 +239,9 @@ const ProjectClient = ({
                     />
                 </div>
 
-                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
                 <Image
-                    className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                    className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[2]}
                     loading='eager'
@@ -281,9 +281,9 @@ const ProjectClient = ({
                 </div>
 
                 <div className="w-full lg:h-125 mt-4 lg:mt-8 flex flex-wrap lg:grid lg:grid-cols-2 gap-5">
-                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden">
+                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden group">
                         <Image
-                        className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                        className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                         fill
                         src={project.images[3]}
                         loading='eager'
@@ -292,9 +292,9 @@ const ProjectClient = ({
                         alt='Project Image'
                         />
                     </div>
-                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden">
+                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden group">
                         <Image
-                        className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                        className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                         fill
                         src={project.images[4]}
                         loading='eager'
@@ -304,9 +304,9 @@ const ProjectClient = ({
                         />
                     </div>
                 </div>
-                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
                 <Image
-                    className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                    className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[5]}
                     loading='eager'
@@ -315,9 +315,9 @@ const ProjectClient = ({
                     alt='Project Image'
                     />
                 </div>
-                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
                 <Image
-                    className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
+                    className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[6]}
                     loading='eager'

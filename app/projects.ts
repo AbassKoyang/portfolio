@@ -9,7 +9,7 @@ const projects : projectType[] = [
         description: 'All-in-one platform for modern vendors.',
         overview: 'Vendrr is the operating system for modern social vendors. Automate the work that slows you down. Generate content with AI, share across your favourite social platforms with Smart Share, chat with your AI assistant, and manage your business effortlessly.',
         images: [
-            "/Vendrr-1.png",
+            "/vendrr-1.png",
             "/Vendrr-2.png",
             "/Vendrr-3.png",
             "/Vendrr-4.png",
