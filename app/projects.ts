@@ -15,6 +15,7 @@ const projects : projectType[] = [
             "/Vendrr-4.png",
             "/Vendrr-5.png",
             "/Vendrr-6.png",
+            "/Vendrr-7.png",
         ],
         expertise: 'Full Stack',
         techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Django, DRF, Celery, Redis, Cloudinary, Gemini, etc',
