@@ -50,7 +50,7 @@ export default function CursorFollower() {
         bg-primary-white
         -translate-x-1/2
         -translate-y-1/2
-        z-[9999]
+        z-9999
       "
     />
   );

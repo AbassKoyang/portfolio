@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import ReactLenis from 'lenis/react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import Footer from './Footer';
 
 const AboutClient = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -87,7 +88,7 @@ const AboutClient = () => {
 
   return (
     <ReactLenis root>
-    <section ref={container} className="w-full bg-primary-black overflow-x-hidden min-h-dvh">
+    <section ref={container} id='top' className="w-full bg-primary-black overflow-x-hidden min-h-dvh">
         <Navbar />
         <header className={`w-full bg-primary-black py-4 px-8`}>
         <div className="items-center justify-between w-full flex">
@@ -104,27 +105,9 @@ const AboutClient = () => {
                         <NavLink link={link} key={i} />
                     ))}
                 </nav>
-                <div className="">
-                    <p className="text-sm text-primary-white uppercase">CONTACT</p>
-                    <NavLink link={emailLink} />
-                </div>
-                <div className=" flex flex-col items-start">
-                    {socialLinks.map((link, i) => (
-                        <NavLink link={link} key={i} />
-                    ))}
-                </div>
-
-                <div className="flex flex-col items-end">
-                    <button>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
-                    </button>
-                    <button>
-                        <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
-                    </button>
-                </div>
             </div>
             <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
-                <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 mr-[-20px]'>menu</motion.p>
+                <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 -mr-5'>menu</motion.p>
             </button>
         </div>
         <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-dvh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
@@ -141,9 +124,6 @@ const AboutClient = () => {
               <div className="w-full absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
                   {headerLinks.map((link, i) => (
                       <NavLink key={i} link={link} paragraphStyles='!text-sm' className='mobile-links' />
-                  ))}
-                  {socialLinks.map((link, i) => (
-                      <NavLink link={link} key={i} paragraphStyles='!text-sm' className='mobile-links' />
                   ))}
                   <NavLink link={emailLink} paragraphStyles='!text-sm' className='mobile-links' />
               </div>
@@ -165,20 +145,20 @@ const AboutClient = () => {
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPERS'S_BIO:</h4>
                     <div className="">
                         <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// GET TO KNOW Koyang</p>
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-[300px]'> I’m Koyang, a fullstack developer building scalable systems and high-performance web experiences. I care about clean architecture, 
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-75'> I’m Koyang, a fullstack developer building scalable systems and high-performance web experiences. I care about clean architecture, 
                     thoughtful UI and UX.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>EARLY CAREER:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion I continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion I continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
                     </div>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPER PHILOSOPHY:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'> Discipline. Consistency. Curiosity. Simplicity. Faith.
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'> Discipline. Consistency. Curiosity. Simplicity. Faith.
                     I approach development the same way I approach life. Structured, intentional,
                     and always improving.</p>
                     </div>
@@ -186,27 +166,9 @@ const AboutClient = () => {
                 <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
                     <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>INTERESTS & HOBBIES:</h4>
                     <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[300px]'>When I’m not coding, I’m watching or playing football, training, 
+                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'>When I’m not coding, I’m watching or playing football, training, 
                     listening to music, or reflecting. My faith plays a central role 
                     in how I move,  grounded, focused, and purpose-driven.</p>
-                    </div>
-                </div>
-                <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>CAREER_INFO:</h4>
-                    <div className="">
-                        <div className="">
-                            <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// PAST WORK EXPERIENCE</p>
-                            <div className="flex items-center gap-10 mt-2">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[200px]'>Web Developer Intern, Precious</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024-2024</p> 
-                            </div>
-                        </div>
-                        <div className="">
-                            <div className="flex items-center gap-10 mt-2">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[200px]'>Web Developer, Poise Nigeria</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023-2024</p> 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -214,14 +176,51 @@ const AboutClient = () => {
             
             <div className="lg:w-[40%] w-full flex flex-col items-end lg:pl-26 mt-16 lg:mt-0">
                 <div className="w-full">
+                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// PAST WORK EXPERIENCE</p>
+                </div>
+
+                <div className="w-full flex items-start lg:justify-start">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer, ZeemaHomes</p>  
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2026</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full flex items-start lg:justify-start mt-5">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer Intern, Precious</p>  
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024 - 2024</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full flex items-start lg:justify-start mt-5">
+                    <div className="w-full">
+                        <div className="flex items-center gap-20 lg:justify-between w-full">
+                            <div className="">
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer, Poise Nigeria</p>  
+                            </div>
+                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024 - 2025</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full mt-10">
                     <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// EDUcation</p>
                 </div>
                 <div className="w-full flex items-start lg:justify-start">
                     <div className="w-full">
                         <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Diploma of Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>EkoBits ICT Academy, Lagos</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Diploma of Computer Science,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>EkoBits ICT Academy, Lagos</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023 - 2024</p> 
                         </div>
@@ -231,8 +230,8 @@ const AboutClient = () => {
                     <div className="w-full">
                         <div className="flex items-center gap-20 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>BSc Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Bayero University, Kano</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>BSc Computer Science,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Bayero University, Kano</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
                         </div>
@@ -246,8 +245,8 @@ const AboutClient = () => {
                     <div className="w-full">
                         <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Andela x Meta React Learning Program Certification,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Meta x Andela</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Andela x Meta React Learning Program Certification,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Meta x Andela</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023</p> 
                         </div>
@@ -257,8 +256,8 @@ const AboutClient = () => {
                     <div className="w-full">
                         <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp JavaScript Algorithms And Data Structures Certifications,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp JavaScript Algorithms And Data Structures Certifications,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
                         </div>
@@ -268,40 +267,17 @@ const AboutClient = () => {
                     <div className="w-full">
                         <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
                             <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>Python Algorithms And Data Structures Certifications,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-[400px]'>FreeCodeCamp</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Python Algorithms And Data Structures Certifications,</p> 
+                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp</p> 
                             </div>
                             <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
                         </div>
                     </div>
                 </div>
-
-                <div className="w-full mt-10">
-                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// CONTACT & SOCIAL LINKS</p>
-                    <div className="w-full flex items-center justify-between flex-wrap gap-1">
-                        <Link href='https://instagram.com/le_chatelier69' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ Instagram
-                        </Link>
-                        <Link href='https://x.com/realabasskoyang' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ X(Formerly Twitter)
-                        </Link>
-                        <Link href='https://linkedin.com/in/abass-ahmad' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ LinkedIn
-                        </Link>
-                        <Link href='mailto:abasskoyang05@gmail.com' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ abasskoyang05@gmail.com
-                        </Link>
-                        <Link href='https://github.com/abasskoyang' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ Github
-                        </Link>
-                        <Link href='https://app.usebraintrust.com/talent/2027794/' className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono underline font-semibold'>
-                        ↗ Braintrust
-                        </Link>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+    <Footer />
     </ReactLenis>
   )
 }

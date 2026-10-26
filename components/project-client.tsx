@@ -140,7 +140,7 @@ const ProjectClient = ({
           ref={projectnavRef}
           className="
             fixed top-0 left-[50%] -translate-x-[50%]
-            w-[100%] md:w-[70%]
+            w-full md:w-[70%]
             flex justify-between gap-8
             p-4 z-20 opacity-0
           "
@@ -157,7 +157,7 @@ const ProjectClient = ({
           </Link>
 
           <div className="
-            relative flex-1 h-[30px]
+            relative flex-1 h-7.5
             flex items-center justify-center
             border border-primary-white/10
             backdrop-blur-xl overflow-hidden
@@ -204,7 +204,7 @@ const ProjectClient = ({
               left-1/2 -translate-x-1/2 -translate-y-1/2
               text-center text-xs lg:text-base font-medium
               opacity-0
-              text-primary-white w-full max-w-full lg:max-w-[500px] px-4
+              text-primary-white w-full max-w-full lg:max-w-125 px-4
             "
           >
             {project.description}
@@ -212,7 +212,7 @@ const ProjectClient = ({
         </div>
 
         <div className="w-full px-4 lg:p-0">
-          <div className="w-full h-[300px] lg:h-screen overflow-hidden relative">
+          <div className="w-full h-75 lg:h-screen overflow-hidden relative">
               <Image
               className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
               fill
@@ -227,7 +227,7 @@ const ProjectClient = ({
 
         <div className="mt-5 lg:mt-10 w-full flex px-4">
             <div className="w-full lg:w-[70%] bg-primary-black">
-                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -239,7 +239,7 @@ const ProjectClient = ({
                     />
                 </div>
 
-                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -280,8 +280,8 @@ const ProjectClient = ({
                     </div>
                 </div>
 
-                <div className="w-full lg:h-[500px] mt-4 lg:mt-8 flex flex-wrap lg:grid lg:grid-cols-2 gap-5">
-                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative lg:rounded-xl overflow-hidden">
+                <div className="w-full lg:h-125 mt-4 lg:mt-8 flex flex-wrap lg:grid lg:grid-cols-2 gap-5">
+                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden">
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
@@ -292,7 +292,7 @@ const ProjectClient = ({
                         alt='Project Image'
                         />
                     </div>
-                    <div className="w-full lg:col-span-1 h-[300px] lg:h-full relative lg:rounded-xl overflow-hidden">
+                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden">
                         <Image
                         className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                         fill
@@ -304,7 +304,7 @@ const ProjectClient = ({
                         />
                     </div>
                 </div>
-                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -315,7 +315,7 @@ const ProjectClient = ({
                     alt='Project Image'
                     />
                 </div>
-                <div className="w-full h-[300px] lg:h-[600px] lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-125 ease-in-out duration-500 transition-all'
                     fill
@@ -327,7 +327,7 @@ const ProjectClient = ({
                     />
                 </div>
             </div>
-            <div className="w-[30%] pl-12 pt-14 h-fit bg-primary-black sticky top-[45px] hidden lg:block">
+            <div className="w-[30%] pl-12 pt-14 h-fit bg-primary-black sticky top-11.25 hidden lg:block">
                 <h1 className='text-primary-white font-semibold text-3xl tracking-tighter'>{project.title}</h1>
                 <Link href={project.url}  className='text-primary-white font-mono text-sm uppercase font-medium'>view project <span className='text-lg'>↗</span></Link>
                 <div className="w-full mt-4">

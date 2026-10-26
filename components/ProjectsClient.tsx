@@ -108,24 +108,6 @@ const ProjectsClient = () => {
                             <NavLink link={link} key={i} />
                         ))}
                     </nav>
-                    <div className="">
-                        <p className="text-sm text-primary-white uppercase">CONTACT</p>
-                        <NavLink link={emailLink} />
-                    </div>
-                    <div className=" flex flex-col items-start">
-                        {socialLinks.map((link, i) => (
-                            <NavLink link={link} key={i} />
-                        ))}
-                    </div>
-
-                    <div className="flex flex-col items-end">
-                        <button>
-                            <p className='text-primary-white font-fragment-mono text-sm uppercase'>Sound [off]</p>
-                        </button>
-                        <button>
-                            <p className='text-primary-white font-fragment-mono text-sm uppercase'>color [#00000]</p>
-                        </button>
-                    </div>
                 </div>
                 <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
                     <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 mr-[-20px]'>menu</motion.p>
@@ -146,9 +128,6 @@ const ProjectsClient = () => {
               <div className="w-full absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
                   {headerLinks.map((link, i) => (
                       <NavLink key={i} link={link} paragraphStyles='!text-sm' className='mobile-links' />
-                  ))}
-                  {socialLinks.map((link, i) => (
-                      <NavLink link={link} key={i} paragraphStyles='!text-sm' className='mobile-links' />
                   ))}
                   <NavLink link={emailLink} paragraphStyles='!text-sm' className='mobile-links' />
               </div>

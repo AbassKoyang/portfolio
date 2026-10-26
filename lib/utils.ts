@@ -43,6 +43,11 @@ export const socialLinks : linkType[] = [
 
 export const headerLinks : linkType[] = [
     {
+      text: "Home",
+      class: "home",
+      url: "/",
+    },
+    {
       text: "Projects[11]",
       class: "project",
       url: "/projects",
@@ -53,9 +58,14 @@ export const headerLinks : linkType[] = [
       url: "/about",
     },
     {
-      text: "Archive",
-      class: "archive",
+      text: "Github",
+      class: "github",
       url: "https://github.com/abasskoyang",
+    },
+    {
+      text: "LinkedIn",
+      class: "linkedin",
+      url: "https://linkedin.com/in/abass-ahmad",    
     },
     {
       text: "Resume",

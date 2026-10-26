@@ -17,7 +17,7 @@ const HomeClient = () => {
   return (
     <ReactLenis root>
     <div className='w-full flex flex-col overflow-x-hidden bg-primary-black'>
-      <Navbar />
+        <Navbar />
         <Hero />
         <Works />
         <Profile/>

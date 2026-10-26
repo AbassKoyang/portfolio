@@ -99,7 +99,7 @@ const Profile = () => {
                 </div>
             </div>
             <div className="w-[50%] lg:w-[30%] flex flex-row items-start lg:flex-col gap-5">
-                <p className='text-primary-white/50 font-fragment-mono text-[10px] lg:text-sm uppercase opacity-0 project'>prohects type</p>
+                <p className='text-primary-white/50 font-fragment-mono text-[10px] lg:text-sm uppercase opacity-0 project'>projects type</p>
                 <div className="">
                     <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase mt-0 lg:mt-5 opacity-0 project'>Web Application</p>
                     <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase mt-3 opacity-0 project'>Interactive Experience</p>

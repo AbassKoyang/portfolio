@@ -5,10 +5,12 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { motion } from "motion/react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 const NavLink = ({ link, className, paragraphStyles }: { link: linkType; className?: string; paragraphStyles?: string }) => {
   const textRef = useRef<HTMLParagraphElement | null>(null);
   const lineRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname()
 
   const handleScrambleText = (
     element: HTMLElement | null,
@@ -58,7 +60,7 @@ const NavLink = ({ link, className, paragraphStyles }: { link: linkType; classNa
               });
             }
           }}
-          className={`text-primary-white font-fragment-mono text-[10px] lg:text-sm uppercase ${paragraphStyles}`}
+          className={`font-fragment-mono text-[10px] lg:text-sm uppercase hover:text-white ${pathname == link.url ? "text-white" : "text-primary-white"} ${paragraphStyles}`}
         >
           {link.text}
         </motion.p>
