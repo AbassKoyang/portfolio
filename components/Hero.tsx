@@ -71,7 +71,7 @@ const Hero = () => {
          <div ref={overlayContainer} className="w-full h-screen bg-primary-white z-30 absolute top-0 left-0 flex items-center justify-center opacity-0">
            <div className="relative w-full min-h-full">
                 <div className="w-full flex items-start justify-center absolute top-[50%] -translate-y-1/2 lg:top-10 lg:translate-y-0 left-[50%] translate-x-[-50%] z-30 p-8">
-                    <div className="w-full flex flex-col justify-start items-start lg:items-center lg:max-w-[65%] max-w-[85%]">
+                    <div className="w-full flex flex-col justify-start items-start lg:items-center lg:max-w-[65%] max-w-[90%]">
                         <h1 className='text-primary-white font-fragment-mono text-xl lg:text-6xl font-medium'>Hi, I'm <span className='font-bold'>Koyang Abass</span>. <br /> A Software Engineer & Computer Science student.</h1>
 
                         <p className='text-primary-white font-fragment-mono text-[10px] lg:text-sm mt-8  uppercase'>I build scalable systems and high-performance web experiences. I care about clean architecture, thoughtful UI and UX, and understanding how things work from the frontend all the way to the backend.</p>
@@ -89,7 +89,7 @@ const Hero = () => {
                 <div className="absolute top-0 left-0 w-full h-full bg-primary-black overlay">
                 </div>
 
-                <div className="absolute bottom-10 lg:bottom-0 left-0 bg-transparent py-8 px-8 w-full z-20">
+                <div className="absolute bottom-50 lg:bottom-0 left-0 bg-transparent py-8 px-8 w-full z-20">
                     <div className="lg:items-center items-start justify-between w-full hidden lg:flex flex-col lg:flex-row">
                         <div className="">
                             <Link href='/'>
