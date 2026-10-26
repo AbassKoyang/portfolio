@@ -131,14 +131,7 @@ const ProjectsClient = () => {
                   ))}
                   <NavLink link={emailLink} paragraphStyles='!text-sm' className='mobile-links' />
               </div>
-              <div className="absolute bottom-0 left-0 w-full flex flex-col items-start buttons">
-                  <button>
-                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>Sound [off]</p>
-                  </button>
-                  <button>
-                      <p className='text-primary-white font-fragment-mono text-xs uppercase'>color [#00000]</p>
-                  </button>
-              </div>
+               
          </div>
       </motion.div>
         </header>
