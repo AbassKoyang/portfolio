@@ -89,7 +89,7 @@ const Hero = () => {
                 <div className="absolute top-0 left-0 w-full h-full bg-primary-black overlay">
                 </div>
 
-                <div className="absolute bottom-50 lg:bottom-0 left-0 bg-transparent py-8 px-8 w-full z-20">
+                <div className="absolute bottom-20 lg:bottom-0 left-0 bg-transparent py-8 px-8 w-full z-20">
                     <div className="lg:items-center items-start justify-between w-full hidden lg:flex flex-col lg:flex-row">
                         <div className="">
                             <Link href='/'>

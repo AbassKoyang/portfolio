@@ -3,6 +3,25 @@ import { projectType } from "@/lib/types"
 const projects : projectType[] = [
     {
         id: 0,
+        url: 'https://vendrr.shop',
+        slug: 'inspirely-pwa',
+        title: 'Vendrr',
+        description: 'All-in-one platform for modern vendors.',
+        overview: 'Vendrr is the operating system for modern social vendors. Automate the work that slows you down. Generate content with AI, share across your favourite social platforms with Smart Share, chat with your AI assistant, and manage your business effortlessly.',
+        images: [
+            "/vendrr-1.png",
+            "/vendrr-2.png",
+            "/vendrr-3.png",
+            "/vendrr-4.png",
+            "/vendrr-5.png",
+            "/vendrr-6.png",
+        ],
+        expertise: 'Full Stack',
+        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Django, DRF, Celery, Redis, Cloudinary, Gemini, etc',
+        year: '2026'
+    },
+    {
+        id: 1,
         url: 'https://useinspirely.vercel.app',
         slug: 'inspirely-pwa',
         title: 'Inspirely',
@@ -22,7 +41,7 @@ const projects : projectType[] = [
         year: '2026'
     },
     {
-        id: 1,
+        id: 2,
         url: 'https://useshoppe.vercel.app/',
         slug: 'shoppe-pwa',
         title: 'Shoppe',
@@ -42,7 +61,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 2,
+        id: 3,
         url: 'https://swirlblog.vercel.app',
         slug: 'swirl',
         title: 'Swirl',
@@ -62,7 +81,7 @@ const projects : projectType[] = [
         year: '2024'
     },
     {
-        id: 3,
+        id: 4,
         url: 'https://briefly-web-app.vercel.app',
         slug: 'briefly-pwa',
         title: "Briefly",
@@ -82,7 +101,7 @@ const projects : projectType[] = [
         year: '2025'
     },    
     {
-        id: 4,
+        id: 5,
         url: 'https://pay4me-alpha.vercel.app/',
         slug: 'pay4me',
         title: 'Pay4Me',
@@ -102,7 +121,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 5,
+        id: 6,
         url: 'https://zentryx.vercel.app/',
         slug: 'zentry',
         title: 'Zentry',
@@ -122,7 +141,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 6,
+        id: 7,
         url: 'https://dart-agro-system.vercel.app/',
         slug: 'dart-agro-system',
         title: 'Dart Agro System',
@@ -142,7 +161,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 7,
+        id: 8,
         url: 'https://velvet-pour-phi.vercel.app/',
         slug: 'velvet',
         title: 'Velvet',
@@ -162,7 +181,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 8,
+        id: 9,
         url: 'https://apple-fifteen-pro.vercel.app/',
         slug: 'apple-website',
         title: 'Apple Website',
@@ -182,7 +201,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 9,
+        id: 10,
         url: 'https://pix-splash.vercel.app/',
         slug: 'pixsplash',
         title: 'PixSplash',
