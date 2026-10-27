@@ -90,182 +90,113 @@ const AboutClient = () => {
     <ReactLenis root>
     <section ref={container} id='top' className="w-full bg-primary-black overflow-x-hidden min-h-dvh">
         <Navbar />
-        <header className={`w-full bg-primary-black py-4 px-8`}>
-        <div className="items-center justify-between w-full flex">
-            <div className="">
-                <Link href='/'>
-                    <p className='font-fragment-mono font-bold text-xl text-primary-white uppercase'>Koyang©</p>
-                </Link>
-                <Clock />
-            </div>
+            <header className={`w-full bg-primary-black py-4 px-8`}>
+            <div className="items-center justify-between w-full flex">
+                <div className="">
+                    <Link href='/'>
+                        <p className='font-fragment-mono font-bold text-xl text-primary-white uppercase'>Koyang©</p>
+                    </Link>
+                    <Clock />
+                </div>
 
-            <div className="lg:flex items-center gap-12 hidden">
-                <nav className="flex items-center gap-12 flex-row">
+                <div className="lg:flex items-center gap-12 hidden">
+                    <nav className="flex items-center gap-12 flex-row">
+                        {headerLinks.map((link, i) => (
+                            <NavLink link={link} key={i} />
+                        ))}
+                    </nav>
+                </div>
+                <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
+                    <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 -mr-5'>menu</motion.p>
+                </button>
+            </div>
+            <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-dvh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
+            <div className="w-full h-full relative">
+                <div className="w-full flex items-start justify-between">
+                    <div className="slide">
+                        <Link href='/'>
+                            <p className='font-fragment-mono font-bold text-xs text-primary-white uppercase lg:mb-1'>Koyang©</p>
+                        </Link>
+                        <Clock />
+                    </div>
+                    <button onClick={handleCloseMenu} className='[writing-mode:vertical-rl] rotate-180 font-fragment-mono font-medium text-sm text-primary-white uppercase slide'>exit</button>
+                </div>
+                <div className="w-full absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
                     {headerLinks.map((link, i) => (
-                        <NavLink link={link} key={i} />
+                        <NavLink key={i} link={link} paragraphStyles='!text-sm' className='mobile-links' />
                     ))}
-                </nav>
+                    <NavLink link={emailLink} paragraphStyles='!text-sm' className='mobile-links' />
+                </div>
+                
             </div>
-            <button onClick={() => setIsOpen(true)} className='block lg:hidden'>
-                <motion.p  className='font-fragment-mono font-bold text-sm text-primary-white uppercase rotate-270 -mr-5'>menu</motion.p>
-            </button>
-        </div>
-        <motion.div initial={{y: '-100%'}} animate={{y: isOpen ? 0 : '-100%', animationDuration: 1, transition: {type: 'tween'}}} className="w-full h-dvh fixed top-0 left-0 bg-primary-black px-8 py-4 menu z-10000">
-         <div className="w-full h-full relative">
-              <div className="w-full flex items-start justify-between">
-                  <div className="slide">
-                      <Link href='/'>
-                          <p className='font-fragment-mono font-bold text-xs text-primary-white uppercase lg:mb-1'>Koyang©</p>
-                      </Link>
-                      <Clock />
-                  </div>
-                  <button onClick={handleCloseMenu} className='[writing-mode:vertical-rl] rotate-180 font-fragment-mono font-medium text-sm text-primary-white uppercase slide'>exit</button>
-              </div>
-              <div className="w-full absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
-                  {headerLinks.map((link, i) => (
-                      <NavLink key={i} link={link} paragraphStyles='!text-sm' className='mobile-links' />
-                  ))}
-                  <NavLink link={emailLink} paragraphStyles='!text-sm' className='mobile-links' />
-              </div>
-               
-         </div>
-      </motion.div>
-    </header>
+        </motion.div>
+        </header>
 
-        <div className='w-full flex justify-between flex-col lg:flex-row overflow-x-hidden bg-primary-black mt-5 lg:mt-8 p-8'>
-            <div className="lg:w-[40%] w-full">
-                <div className="w-full flex flex-col lg:flex-row items-start justify-between">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPERS'S_BIO:</h4>
-                    <div className="">
-                        <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// GET TO KNOW Koyang</p>
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono mt-2 max-w-75'> I’m Koyang, a fullstack developer building scalable systems and high-performance web experiences. I care about clean architecture, 
-                    thoughtful UI and UX.</p>
-                    </div>
-                </div>
-                <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>EARLY CAREER:</h4>
-                    <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'>My journey into tech started at Ekobits where learnt the basics of web development. With curiosity and passion I continued learning and building projects, understanding how things work, breaking them, then rebuilding them better. That mindset evolved into learning both frontend interactions and backend systems.</p>
-                    </div>
-                </div>
-                <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>DEVELOPER PHILOSOPHY:</h4>
-                    <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'> Discipline. Consistency. Curiosity. Simplicity. Faith.
-                    I approach development the same way I approach life. Structured, intentional,
-                    and always improving.</p>
-                    </div>
-                </div>
-                <div className="w-full flex flex-col lg:flex-row items-start justify-between mt-8">
-                    <h4 className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase mb-2 lg:mb-0'>INTERESTS & HOBBIES:</h4>
-                    <div className="">
-                        <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-75'>When I’m not coding, I’m watching or playing football, training, 
-                    listening to music, or reflecting. My faith plays a central role 
-                    in how I move,  grounded, focused, and purpose-driven.</p>
-                    </div>
-                </div>
-            </div>
+        <div className='w-full flex items-center justify-center bg-primary-black mt-8 lg:mt-28'>
+            <div className="w-full max-w-full lg:max-w-[65%] px-8">
+                <h3 className='font-fragment-mono font-semibold text-2xl lg:text-[100px] text-primary-white uppercase tracking-tighter lg:leading-0'>S/About</h3>
 
-            
-            <div className="lg:w-[40%] w-full flex flex-col items-end lg:pl-26 mt-16 lg:mt-0">
-                <div className="w-full">
-                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// PAST WORK EXPERIENCE</p>
+                <div className="mt-14 lg:mt-40">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Early Career</h6>
+                    <p className='font-fragment-mono text-sm text-primary-white mt-3 leading-relaxed'>My journey into tech started at EkoBits, where I learnt the basics of web development. With curiosity and passion, I continued learning and building projects, understanding how things work, breaking them, then rebuilding them better.That mindset evolved into learning both frontend interactions and backend systems, eventually leading me toward full-stack development.</p>
                 </div>
 
-                <div className="w-full flex items-start lg:justify-start">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer, ZeemaHomes</p>  
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2026</p> 
-                        </div>
-                    </div>
+                <div className="mt-14">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Developer Philosophy</h6>
+                    <p className='font-fragment-mono text-sm text-primary-white mt-3 leading-relaxed'>Discipline. Consistency. Curiosity. Simplicity. Faith. I approach development the same way I approach life. Structured, intentional, and always improving.</p>
                 </div>
 
-                <div className="w-full flex items-start lg:justify-start mt-5">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer Intern, Precious</p>  
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024 - 2024</p> 
-                        </div>
-                    </div>
+                <div className="mt-14">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Interests & Hobbies</h6>
+                    <p className='font-fragment-mono text-sm text-primary-white mt-3 leading-relaxed'>When I'm not coding, I'm watching or playing football, training, listening to music, or reflecting. My faith plays a central role in how I move, grounded, focused, and purpose-driven.</p>
                 </div>
 
-                <div className="w-full flex items-start lg:justify-start mt-5">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Web Developer, Poise Nigeria</p>  
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024 - 2025</p> 
-                        </div>
-                    </div>
+                <div className="mt-14">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Work Experience</h6>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Software Developer · Zeema Homes</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>2025 — 2026</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Web Developer Intern · Precious</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>2024</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Web Developer · Poise Nigeria</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>2023 — 2024</p>
+                   </div>
                 </div>
 
-                <div className="w-full mt-10">
-                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// EDUcation</p>
-                </div>
-                <div className="w-full flex items-start lg:justify-start">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Diploma of Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>EkoBits ICT Academy, Lagos</p> 
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023 - 2024</p> 
-                        </div>
-                    </div>
-                </div>
-                <div className="w-full flex items-start lg:justify-start mt-5">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>BSc Computer Science,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Bayero University, Kano</p> 
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
-                        </div>
-                    </div>
+                <div className="mt-14">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Education</h6>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>BSc Computer Science</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>Bayero University, Kano · 2024 — Present</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Diploma of Computer Science</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>EkoBits ICT Academy, Lagos · 2023 — 2024</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Python Algorithms & Data Structures</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>FreeCodeCamp . 2026</p>
+                   </div>
                 </div>
 
-                <div className="w-full mt-10">
-                    <p className='text-[10px] lg:text-sm text-primary-white font-fragment-mono uppercase'>// Certifications</p>
-                </div>
-                <div className="w-full flex items-start lg:justify-start">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Andela x Meta React Learning Program Certification,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Meta x Andela</p> 
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2023</p> 
-                        </div>
-                    </div>
-                </div>
-                <div className="w-full flex items-start lg:justify-start">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp JavaScript Algorithms And Data Structures Certifications,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp</p> 
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
-                        </div>
-                    </div>
-                </div>
-                <div className="w-full flex items-start lg:justify-start">
-                    <div className="w-full">
-                        <div className="flex items-center gap-20 mt-2 lg:justify-between w-full">
-                            <div className="">
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>Python Algorithms And Data Structures Certifications,</p> 
-                                <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono max-w-100'>FreeCodeCamp</p> 
-                            </div>
-                            <p className='text-[10px] lg:text-sm    text-primary-white font-fragment-mono'>2024</p> 
-                        </div>
-                    </div>
+                <div className="mt-14">
+                    <h6 className='font-fragment-mono uppercase text-xs text-primary-white/30 font-semibold'>Certifications</h6>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>React Learning Program Certification</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>Meta × Andela . 2023</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>JavaScript Algorithms & Data Structures</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>FreeCodeCamp · 2024</p>
+                   </div>
+                   <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>High School Certificate</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>OCSSS . 2019 — 2022</p>
+                   </div>
                 </div>
             </div>
         </div>
