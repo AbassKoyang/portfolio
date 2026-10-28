@@ -177,9 +177,9 @@ const AboutClient = () => {
                         <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Diploma of Computer Science</p>
                         <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>EkoBits ICT Academy, Lagos · 2023 — 2024</p>
                    </div>
-                   <div className="mt-3">
-                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Python Algorithms & Data Structures</p>
-                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>FreeCodeCamp . 2026</p>
+                    <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>High School Certificate</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>OCSSS . 2019 — 2022</p>
                    </div>
                 </div>
 
@@ -193,9 +193,9 @@ const AboutClient = () => {
                         <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>JavaScript Algorithms & Data Structures</p>
                         <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>FreeCodeCamp · 2024</p>
                    </div>
-                   <div className="mt-3">
-                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>High School Certificate</p>
-                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>OCSSS . 2019 — 2022</p>
+                    <div className="mt-3">
+                        <p className='font-fragment-mono text-sm text-primary-white leading-relaxed'>Python Algorithms & Data Structures</p>
+                        <p className='font-fragment-mono text-xs text-primary-white/60 mt-1 leading-relaxed'>FreeCodeCamp . 2026</p>
                    </div>
                 </div>
             </div>
