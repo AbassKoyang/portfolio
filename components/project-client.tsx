@@ -217,7 +217,7 @@ const ProjectClient = ({
               className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
               fill
               src={project.images[0]}
-              loading='eager'
+              loading='lazy'
               placeholder='blur'
               blurDataURL='/assets/images/default-avatar.png'
               alt='Project Image'
@@ -232,7 +232,7 @@ const ProjectClient = ({
                     className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[1]}
-                    loading='eager'
+                    loading='lazy'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
                     alt='Project Image'
@@ -244,7 +244,7 @@ const ProjectClient = ({
                     className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[2]}
-                    loading='eager'
+                    loading='lazy'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
                     alt='Project Image'
@@ -280,36 +280,37 @@ const ProjectClient = ({
                     </div>
                 </div>
 
-                <div className="w-full lg:h-125 mt-4 lg:mt-8 flex flex-wrap lg:grid lg:grid-cols-2 gap-5">
-                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden group">
-                        <Image
-                        className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
-                        fill
-                        src={project.images[3]}
-                        loading='eager'
-                        placeholder='blur'
-                        blurDataURL='/assets/images/default-avatar.png'
-                        alt='Project Image'
-                        />
-                    </div>
-                    <div className="w-full lg:col-span-1 h-75 lg:h-full relative lg:rounded-xl overflow-hidden group">
-                        <Image
-                        className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
-                        fill
-                        src={project.images[4]}
-                        loading='eager'
-                        placeholder='blur'
-                        blurDataURL='/assets/images/default-avatar.png'
-                        alt='Project Image'
-                        />
-                    </div>
+                
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
+                  <Image
+                      className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
+                      fill
+                      src={project.images[3]}
+                      loading='lazy'
+                      placeholder='blur'
+                      blurDataURL='/assets/images/default-avatar.png'
+                      alt='Project Image'
+                      />
                 </div>
+
+                <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
+                  <Image
+                      className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
+                      fill
+                      src={project.images[4]}
+                      loading='lazy'
+                      placeholder='blur'
+                      blurDataURL='/assets/images/default-avatar.png'
+                      alt='Project Image'
+                      />
+                </div>
+
                 <div className="w-full h-75 lg:h-150 lg:rounded-xl relative overflow-hidden group mt-4 lg:mt-8">
                 <Image
                     className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[5]}
-                    loading='eager'
+                    loading='lazy'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
                     alt='Project Image'
@@ -320,7 +321,7 @@ const ProjectClient = ({
                     className='object-cover group-hover:scale-105 ease-in-out duration-500 transition-all'
                     fill
                     src={project.images[6]}
-                    loading='eager'
+                    loading='lazy'
                     placeholder='blur'
                     blurDataURL='/assets/images/default-avatar.png'
                     alt='Project Image'

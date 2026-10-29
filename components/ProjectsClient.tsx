@@ -138,7 +138,7 @@ const ProjectsClient = () => {
         <div className="w-full mt-8 lg:mt-0 lg:py-8 px-8">
             <div className="flex items-start lg:mt-20">
                 <h3 className='font-fragment-mono font-semibold text-2xl lg:text-[100px] text-primary-white uppercase tracking-tighter lg:leading-0'>S/Projects</h3>
-                <span className='text-sm lg:text-xl lg:leading-0 font-fragment-mono font-semibold text-primary-white uppercase'>[11]</span>
+                <span className='text-sm lg:text-xl lg:leading-0 font-fragment-mono font-semibold text-primary-white uppercase'>[15]</span>
             </div>
         </div>
         <Works />

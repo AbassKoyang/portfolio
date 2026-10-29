@@ -18,11 +18,31 @@ const projects : projectType[] = [
             "/Vendrr-7.png",
         ],
         expertise: 'Full Stack',
-        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Django, DRF, Celery, Redis, Cloudinary, Gemini, etc',
+        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Django, DRF, Celery, Redis, Cloudinary, Gemini, Postgres etc',
         year: '2026'
     },
     {
         id: 1,
+        url: 'https://usemarketx.vercel.app',
+        slug: 'marketx',
+        title: 'MarketX',
+        description: 'MarketX is a campus-focused simulated prediction-market.',
+        overview: 'MarketX is a web-based prediction market where users trade outcomes of real-world events using virtual credits. Users can: \t Browse, search, and filter prediction markets \t View market probabilities, charts, statistics, and order-book data \t Buy and sell outcome contracts through market orders \t Track positions, trades, orders, portfolio performance, and wallet activity \t Sign in with Google and complete user onboarding \t Receive notifications and review account activity',
+        images: [
+            "/marketx-1.png",
+            "/marketx-2.png",
+            "/marketx-3.png",
+            "/marketx-4.png",
+            "/marketx-5.png",
+            "/marketx-6.png",
+            "/marketx-7.png",
+        ],
+        expertise: 'Full Stack',
+        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Django, DRF, Celery, Redis, Cloudinary, Postgres etc',
+        year: '2026'
+    },
+    {
+        id: 2,
         url: 'https://www.zeemahomes.com',
         slug: 'zeenahomes',
         title: 'Zeema Homes',
@@ -38,11 +58,11 @@ const projects : projectType[] = [
             "/zeema-7.png",
         ],
         expertise: 'Full Stack',
-        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Python, Django, DRF, etc',
+        techStack: 'Next.js, React 19, TypeScript, TailwindCSS 4, ShadCN, React Query, Python, Django, DRF, Postgres etc',
         year: '2026'
     },
     {
-        id: 2,
+        id: 3,
         url: 'https://useinspirely.vercel.app',
         slug: 'inspirely-pwa',
         title: 'Inspirely',
@@ -58,11 +78,31 @@ const projects : projectType[] = [
             "/inspirely-7.png",
         ],
         expertise: 'Full Stack',
-        techStack: 'Next.js 16, React 19, TypeScript, TailwindCSS 4, Radix UI, TipTap (rich text editor), React Query, React Hook Form, Zod, Lucide Icons, Sonner (toasts)',
+        techStack: 'Next.js 16, React 19, TypeScript, TailwindCSS 4, Radix UI, TipTap (rich text editor), React Query, Zod, Python, Django, DRF, Cloudinary, Postgres etc',
         year: '2026'
     },
     {
-        id: 3,
+        id: 4,
+        url: 'https://usecodexa.vercel.app',
+        slug: 'codexa',
+        title: 'Codexa',
+        description: 'AI powered web-based code editor.',
+        overview: 'Codexa is an AI-powered, browser-based code editor/IDE. It lets authenticated users create and manage projects, browse files, edit code with Monaco, use editor themes, receive AI autocomplete suggestions, and run Python directly in the browser. Python execution is handled client-side through Pyodide in a Web Worker, with terminal output and interactive input support.',
+        images: [
+            "/codexa-1.png",
+            "/codexa-2.png",
+            "/codexa-3.png",
+            "/codexa-4.png",
+            "/codexa-5.png",
+            "/codexa-6.png",
+            "/codexa-7.png",
+        ],
+        expertise: 'Full Stack',
+        techStack: 'Next.js 16, React 19, TypeScript, TailwindCSS 4, ShadCN UI, React Query, Monaco Editor, Pyodide, Axios, Paystaxk, Python, Django, DRF, cloudinary, etc',
+        year: '2026'
+    },
+    {
+        id: 5,
         url: 'https://useshoppe.vercel.app/',
         slug: 'shoppe-pwa',
         title: 'Shoppe',
@@ -81,8 +121,28 @@ const projects : projectType[] = [
         techStack: 'Next.js 15 (App Router), TailwindCSS 4, Shadcn UI (with Radix UI, class-variance-authority), TypeScript, GSAP + Framer Motion, TanStack Query, React Hook Form + Zod, Firebase, Mastra, Express.js (server), BullMQ/Redis (queues), Socket.io, Algolia, Paystack, Next Cloudinary, React Email/Resend, Lucide icons',
         year: '2025'
     },
+        {
+        id: 6,
+        url: 'https://opay-redesign-smoky.vercel.app',
+        slug: 'opay',
+        title: 'Opay Redesign',
+        description: 'Redefining the Future of Finance',
+        overview: "A complete redesign of Opay's website with an AI agent for 24/7 customer service.Opay is Nigerias' leading fintech company. Manage, invest, and grow your money effortlessly with opay.",
+        images: [
+            "/opay-1.png",
+            "/opay-2.png",
+            "/opay-4.png",
+            "/opay-5.png",
+            "/opay-6.png",
+            "/opay-7.png",
+            "/opay-3.png",
+        ],
+        expertise: 'Full Stack',
+        techStack: 'React 19, TypeScript, TailwindCSS 4, ShadCN, Mastra AI, etc',
+        year: '2026'
+    },
     {
-        id: 4,
+        id: 7,
         url: 'https://swirlblog.vercel.app',
         slug: 'swirl',
         title: 'Swirl',
@@ -102,7 +162,7 @@ const projects : projectType[] = [
         year: '2024'
     },
     {
-        id: 5,
+        id: 8,
         url: 'https://briefly-web-app.vercel.app',
         slug: 'briefly-pwa',
         title: "Briefly",
@@ -122,7 +182,7 @@ const projects : projectType[] = [
         year: '2025'
     },    
     {
-        id: 6,
+        id: 9,
         url: 'https://pay4me-alpha.vercel.app/',
         slug: 'pay4me',
         title: 'Pay4Me',
@@ -142,7 +202,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 7,
+        id: 10,
         url: 'https://zentryx.vercel.app/',
         slug: 'zentry',
         title: 'Zentry',
@@ -162,7 +222,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 8,
+        id: 11,
         url: 'https://dart-agro-system.vercel.app/',
         slug: 'dart-agro-system',
         title: 'Dart Agro System',
@@ -182,7 +242,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 9,
+        id: 12,
         url: 'https://velvet-pour-phi.vercel.app/',
         slug: 'velvet',
         title: 'Velvet',
@@ -202,7 +262,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 10,
+        id: 13,
         url: 'https://apple-fifteen-pro.vercel.app/',
         slug: 'apple-website',
         title: 'Apple Website',
@@ -222,7 +282,7 @@ const projects : projectType[] = [
         year: '2025'
     },
     {
-        id: 11,
+        id: 14,
         url: 'https://pix-splash.vercel.app/',
         slug: 'pixsplash',
         title: 'PixSplash',
